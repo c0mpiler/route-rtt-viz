@@ -1,0 +1,9 @@
+{
+  "connections": [
+    { "source": "Chicago", "target": "Dallas", "rtt": 24 },
+    { "source": "New York", "target": "Seattle", "rtt": 40 },
+    { "source": "New York", "target": "Washington DC", "rtt": 6 },
+    { "source": "London", "target": "New York", "rtt": 70 },
+    { "source": "London", "target": "Singapore", "rtt": 165 }
+  ]
+}

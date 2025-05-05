@@ -1,0 +1,13 @@
+{
+  "name": "ic-lat-calc-tools",
+  "version": "1.0.0",
+  "description": "Tools for IBM Cloud Latency Pathfinder",
+  "main": "update-rtt.js",
+  "scripts": {
+    "update": "node update-rtt.js",
+    "verify": "node update-rtt.js --verify"
+  },
+  "dependencies": {
+    "csv-parse": "^5.4.0"
+  }
+}

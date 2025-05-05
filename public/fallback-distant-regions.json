@@ -1,0 +1,13 @@
+{
+  "regions": [
+    "London", "Paris", "Mumbai", "Singapore", "Hong Kong", 
+    "Sydney", "Tokyo", "Sao Paulo", "Chennai", "Perth"
+  ],
+  "specialCombinations": [
+    ["London", "Mumbai", "Singapore"],
+    ["Paris", "Mumbai", "Hong Kong"],
+    ["London", "Hong Kong", "Sydney"],
+    ["Sao Paulo", "London", "Mumbai"],
+    ["Mumbai", "Singapore", "Sydney"]
+  ]
+}

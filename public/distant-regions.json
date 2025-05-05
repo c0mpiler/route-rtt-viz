@@ -1,0 +1,20 @@
+{
+  "regions": [
+    "London", "Paris", "Mumbai", "Singapore", "Hong Kong", 
+    "Sydney", "Tokyo", "Sao Paulo", "Chennai", "Perth",
+    "Madrid", "Berlin", "Amsterdam", "Seoul", "Bangalore",
+    "Jakarta", "Johannesburg", "Cairo", "Auckland", "Moscow"
+  ],
+  "specialCombinations": [
+    ["London", "Mumbai", "Singapore"],
+    ["Paris", "Mumbai", "Hong Kong"],
+    ["London", "Hong Kong", "Sydney"],
+    ["Sao Paulo", "London", "Mumbai"],
+    ["Mumbai", "Singapore", "Sydney"],
+    ["Tokyo", "Hong Kong", "Singapore"],
+    ["New York", "London", "Mumbai"],
+    ["Seattle", "Tokyo", "Singapore"],
+    ["Dallas", "Sao Paulo", "London"],
+    ["Frankfurt", "Mumbai", "Tokyo"]
+  ]
+}

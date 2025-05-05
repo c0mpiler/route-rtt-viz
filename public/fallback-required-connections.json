@@ -1,0 +1,7 @@
+{
+  "connections": [
+    { "source": "Chicago", "target": "Dallas", "latency": 24 },
+    { "source": "New York", "target": "Seattle", "latency": 40 },
+    { "source": "New York", "target": "Washington DC", "latency": 6 }
+  ]
+}

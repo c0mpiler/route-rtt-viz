@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-secondary-50 text-secondary-900;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-4 overflow-hidden;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-200 text-secondary-900 hover:bg-secondary-300 focus:ring-secondary-500;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-secondary-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500;
+  }
+
+  .select-wrapper {
+    @apply relative;
+  }
+
+  .route-box {
+    @apply rounded-lg p-4 my-2 transition-all;
+  }
+
+  .route-box-fastest {
+    @apply bg-success-50 border-l-4 border-success-500;
+  }
+
+  .route-box-fast {
+    @apply bg-blue-50 border-l-4 border-blue-500;
+  }
+
+  .route-box-medium {
+    @apply bg-yellow-50 border-l-4 border-yellow-500;
+  }
+
+  .route-box-slow {
+    @apply bg-orange-50 border-l-4 border-orange-500;
+  }
+
+  .route-box-slowest {
+    @apply bg-danger-50 border-l-4 border-danger-500;
+  }
+
+  .latency-indicator {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .latency-low {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .latency-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .latency-high {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .loading-pulse {
+    @apply animate-ping-slow absolute inline-flex h-full w-full rounded-full opacity-75;
+  }
+}

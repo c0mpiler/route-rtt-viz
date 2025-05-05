@@ -1,0 +1,82 @@
+{
+  "name": "route-radar",
+  "version": "0.1.0",
+  "description": "Route Radar - Interactive visualization tool for network latency between any regions",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "analyze": "vite build --mode analyze"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "d3": "^7.8.5",
+    "d3-geo": "^3.1.1",
+    "d3-geo-projection": "^4.0.0",
+    "framer-motion": "^10.16.5",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-select": "^5.7.7",
+    "three": "^0.176.0",
+    "web-vitals": "^3.5.2"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/d3-geo": "^3.1.0",
+    "@types/mapbox-gl": "^2.7.18",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^6.1.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "tailwindcss": "^3.3.6",
+    "terser": "^5.39.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.0.4",
+    "workbox-window": "^7.0.0"
+  },
+  "homepage": "https://c0mpiler.github.io/route-rtt-viz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c0mpiler/route-rtt-viz.git"
+  },
+  "keywords": [
+    "network-latency",
+    "visualization",
+    "route-planning",
+    "react",
+    "typescript",
+    "d3js",
+    "cloud-networks",
+    "aws",
+    "azure",
+    "gcp"
+  ],
+  "author": "Harsha <c0mpiler@ins8s.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c0mpiler/route-rtt-viz/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}

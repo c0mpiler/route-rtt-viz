@@ -1,0 +1,14 @@
+{
+  "connections": [
+    { "source": "Chicago", "target": "Dallas", "rtt": 24 },
+    { "source": "New York", "target": "Seattle", "rtt": 40 },
+    { "source": "New York", "target": "Washington DC", "rtt": 6 },
+    { "source": "London", "target": "New York", "rtt": 70 },
+    { "source": "London", "target": "Singapore", "rtt": 165 },
+    { "source": "London", "target": "Frankfurt", "rtt": 18 },
+    { "source": "Singapore", "target": "Tokyo", "rtt": 74 },
+    { "source": "Singapore", "target": "Sydney", "rtt": 92 },
+    { "source": "Dallas", "target": "San Jose", "rtt": 30 },
+    { "source": "San Jose", "target": "Seattle", "rtt": 18 }
+  ]
+}

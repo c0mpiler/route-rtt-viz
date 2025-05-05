@@ -1,0 +1,10 @@
+{
+  "continents": {
+    "North America": ["Dallas", "Chicago", "Washington", "Montreal", "Toronto", "Mexico", "San Jose", "Miami"],
+    "South America": ["Sao Paulo", "Santiago"],
+    "Europe": ["London", "Frankfurt", "Paris", "Milan", "Madrid", "Amsterdam"],
+    "Asia": ["Tokyo", "Singapore", "Seoul", "Hong Kong", "Beijing", "Mumbai", "Chennai", "Osaka"],
+    "Oceania": ["Sydney", "Melbourne", "Perth"],
+    "Africa": ["Johannesburg", "Cairo"]
+  }
+}

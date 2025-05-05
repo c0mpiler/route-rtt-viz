@@ -1,0 +1,7 @@
+source,target,rtt
+us-east-1,us-west-2,65
+us-west-2,us-east-1,65
+us-east-1,eu-west-1,85
+eu-west-1,us-east-1,85
+eu-west-1,ap-southeast-1,170
+ap-southeast-1,eu-west-1,170
