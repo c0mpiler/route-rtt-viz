@@ -13,7 +13,12 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [
-      react(),
+      react({
+        jsxImportSource: '@emotion/react',
+        babel: {
+          plugins: ['@emotion/babel-plugin']
+        }
+      }),
       visualizer({
         filename: "./stats.html",
         open: false,
@@ -21,7 +26,7 @@ export default defineConfig(({ mode }) => {
         brotliSize: true,
       }),
     ],
-    base: isDev ? "/" : "/route-rtt-viz/", // Important for GitHub Pages deployment
+    base: "/", // Use root path for GitHub Pages with official action  
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
@@ -124,7 +129,7 @@ export default defineConfig(({ mode }) => {
     },
     worker: {
       format: 'es', // Worker files as ES modules
-      plugins: () => [], // Function that returns an empty array of plugins
+      plugins: [] // Array instead of function
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'd3', 'chart.js'], // Pre-bundle these dependencies
