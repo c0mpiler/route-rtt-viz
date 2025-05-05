@@ -13,7 +13,13 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [
-      react(),
+      react({
+        jsxRuntime: 'automatic',
+        jsxImportSource: undefined,
+        babel: {
+          plugins: []
+        }
+      }),
       visualizer({
         filename: "./stats.html",
         open: false,
@@ -124,10 +130,10 @@ export default defineConfig(({ mode }) => {
     },
     worker: {
       format: 'es', // Worker files as ES modules
-      plugins: []   // Array instead of function
+      plugins: () => [] // Function that returns an empty array of plugins
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'd3', 'chart.js'], // Pre-bundle these dependencies
+      include: ['react', 'react-dom', 'd3', 'chart.js', 'react-select', 'framer-motion'], // Pre-bundle these dependencies
       exclude: [], // Don't pre-bundle these
     },
   };
