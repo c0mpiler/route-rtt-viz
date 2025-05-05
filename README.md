@@ -149,5 +149,3 @@ For issues, feature requests, or contributions, please visit our [GitHub Issues]
 [MIT](LICENSE) © 2025 Harsha
 
 ---
-
-**Route Radar** - Navigate the network landscape with confidence.

@@ -1,10 +1,10 @@
 /**
  * Header - Main application header component
- * 
+ *
  * This component renders the application header with title, description,
  * and advanced tools button.
  */
-import React from 'react';
+import React from "react";
 
 interface HeaderProps {
   /** Handler for toggling debugging tools */
@@ -52,13 +52,14 @@ export const Header: React.FC<HeaderProps> = ({ onToggleDebuggingTools }) => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              Visualize network latency and find optimal paths between any regions
+              Visualize network latency and find optimal paths between any
+              regions
             </p>
           </div>
 
           <div className="mt-4 md:mt-0">
             {/* Only show advanced tools button in development mode */}
-            {process.env.NODE_ENV === 'development' && (
+            {process.env.NODE_ENV === "development" && (
               <span className="inline-flex rounded-md shadow-sm">
                 <button
                   onClick={onToggleDebuggingTools}
