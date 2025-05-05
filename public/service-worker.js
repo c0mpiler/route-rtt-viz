@@ -11,9 +11,7 @@ const CACHE_NAME = 'route-radar-cache-v1';
 // App shell files to cache on install
 const APP_SHELL_FILES = [
   '/route-rtt-viz/',
-  '/route-rtt-viz/index.html',
-  '/route-rtt-viz/assets/index.css',
-  '/route-rtt-viz/assets/index.js'
+  '/route-rtt-viz/index.html'
 ];
 
 // Data files to cache
@@ -25,11 +23,12 @@ const DATA_FILES = [
   '/route-rtt-viz/default-coordinates.json',
   '/route-rtt-viz/distant-regions.json',
   '/route-rtt-viz/essential-connections.json',
-  '/route-rtt-viz/required-connections.json'
+  '/route-rtt-viz/required-connections.json',
+  '/route-rtt-viz/hub-regions.json'
 ];
 
 // Combined files to cache
-const CACHE_FILES = [...APP_SHELL_FILES, ...DATA_FILES];
+const INITIAL_CACHE_FILES = [...APP_SHELL_FILES, ...DATA_FILES];
 
 /**
  * Install event - precache app shell and data files
@@ -42,7 +41,25 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('[Service Worker] Caching app shell and data files');
-        return cache.addAll(CACHE_FILES);
+        
+        // Cache files individually to handle failures gracefully
+        return Promise.all(
+          INITIAL_CACHE_FILES.map(file => {
+            return fetch(file)
+              .then(response => {
+                if (response.ok) {
+                  return cache.put(file, response);
+                } else {
+                  console.warn(`[Service Worker] Failed to cache: ${file}`);
+                  return Promise.resolve();
+                }
+              })
+              .catch(error => {
+                console.warn(`[Service Worker] Error caching: ${file}`, error);
+                return Promise.resolve();
+              });
+          })
+        );
       })
       .then(() => {
         console.log('[Service Worker] Installation completed');
@@ -94,8 +111,9 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   
-  // Handle app shell files with cache-first strategy
-  if (APP_SHELL_FILES.some(file => url.pathname.endsWith(file))) {
+  // Handle JavaScript/CSS assets with cache-first strategy
+  if (url.pathname.includes('/assets/') && 
+      (url.pathname.endsWith('.js') || url.pathname.endsWith('.css'))) {
     event.respondWith(cacheFirst(event.request));
     return;
   }
@@ -159,7 +177,7 @@ function networkFirst(request) {
 function staleWhileRevalidate(request) {
   return caches.match(request)
     .then((cachedResponse) => {
-      // Return cached response immediately if available
+      // Revalidate in the background
       const fetchPromise = fetch(request)
         .then((networkResponse) => {
           if (networkResponse.ok) {
@@ -173,6 +191,7 @@ function staleWhileRevalidate(request) {
           return null;
         });
       
+      // Return cached response if available, otherwise wait for the network
       return cachedResponse || fetchPromise;
     });
 }
