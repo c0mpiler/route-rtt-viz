@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
         brotliSize: true,
       }),
     ],
-    base: isDev ? "/" : "/route-radar/", // Important for GitHub Pages deployment
+    base: isDev ? "/" : "/route-rtt-viz/", // Important for GitHub Pages deployment
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
