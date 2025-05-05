@@ -24,8 +24,6 @@ const NetworkVisualizer = lazy(() => import("@components/NetworkVisualizer").the
 const WorldMapVisualizer = lazy(() => import("@components/WorldMapVisualizer").then(module => ({ default: module.WorldMapVisualizer })));
 const Dashboard = lazy(() => import("@components/Dashboard").then(module => ({ default: module.Dashboard })));
 
-const DashboardUnified = lazy(() => import("@components/DashboardUnified").then(module => ({ default: module.default })));
-
 // Added: Import NetworkData type
 import type { NetworkData } from '@types/network';
 

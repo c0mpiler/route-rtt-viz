@@ -1,5 +1,5 @@
 /**
- * parseLatencyData - Converts raw IBM Cloud latency data into graph format
+ * parseLatencyData - Converts raw network latency data into graph format
  * 
  * This utility transforms the raw latency data string into a structured
  * format that can be used to build the NetworkGraph.

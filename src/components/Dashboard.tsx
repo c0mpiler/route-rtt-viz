@@ -324,27 +324,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
         </div>
       </SectionCard>
 
-      {/* Advanced Analytics - Full width - TEMPORARILY HIDDEN */}
-      {false && (
-        <SectionCard
-          title="Advanced Network Analytics"
-        >
-          <LazyComponent
-            component={
-              <AdvancedAnalytics
-                graph={graph}
-                paths={shortestPaths}
-                longestPath={longestPath}
-                longestPathBetween={longestPathBetweenSelection}
-                sourceRegion={sourceRegion}
-                targetRegion={targetRegion}
-              />
-            }
-            loadingMessage="Loading advanced analytics..."
-            minHeight="500px"
-          />
-        </SectionCard>
-      )}
     </div>
   );
 };

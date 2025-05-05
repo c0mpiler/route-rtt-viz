@@ -2,8 +2,7 @@
  * AdvancedAnalytics - Sophisticated analytics and performance monitoring system
  * 
  * This component provides enterprise-grade analytics, visualization, and performance monitoring
- * for the IBM Cloud Latency Pathfinder application. It offers deep insights into network
- * performance, latency patterns, and optimization opportunities.
+ * for the Route Radar application. It offers deep insights into network performance, latency patterns, and optimization opportunities.
  * 
  * Key Features:
  * - Real-time performance metrics

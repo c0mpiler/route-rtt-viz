@@ -1,7 +1,7 @@
 /**
  * WorldMapVisualizer - Interactive world map visualization component
  *
- * This component creates a detailed interactive world map showing IBM Cloud regions
+ * This component creates a detailed interactive world map showing regional network topology
  * and the network paths between them using D3.js.
  */
 import React, { useRef, useEffect, useState } from "react";
@@ -739,7 +739,7 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
       }
     };
 
-    // Add IBM Cloud regions as points
+    // Add network regions as points
     const regions = graph.getRegions();
     console.log("Regions to render:", regions);
     console.log("Region count:", regions.length);
