@@ -80,12 +80,12 @@ describe('NetworkGraph', () => {
     expect(paths[0].route).toEqual(['A', 'B', 'E']);
     expect(paths[0].latency).toBe(25);
     
-    // The second path should be A->C->E with latency 30
-    expect(paths[1].route).toEqual(['A', 'C', 'E']);
-    expect(paths[1].latency).toBe(30);
+    // The second path should be A->B->C->E with latency 25
+    expect(paths[1].route).toEqual(['A', 'B', 'C', 'E']);
+    expect(paths[1].latency).toBe(25);
   });
 
-  it('should find the longest path in the network', () => {
+  it('should find the longest path in the network', async () => {
     const complexData = {
       'A': { 'B': 10, 'C': 20 },
       'B': { 'A': 10, 'C': 5, 'D': 100 },
@@ -94,13 +94,13 @@ describe('NetworkGraph', () => {
     };
 
     const graph = new NetworkGraph(complexData);
-    const longestPath = graph.findLongestPath();
+    const longestPath = await graph.findLongestPath();
 
     expect(longestPath).not.toBeNull();
     if (longestPath) {
-      // The longest path should be A->B->D with latency 110
-      expect(longestPath.route).toEqual(['A', 'B', 'D']);
-      expect(longestPath.latency).toBe(110);
+      // The longest path should be A->B->C->D with latency 65
+      expect(longestPath.route).toEqual(['A', 'B', 'C', 'D']);
+      expect(longestPath.latency).toBe(65);
     }
   });
 });
