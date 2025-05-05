@@ -5,7 +5,7 @@
  * source and target regions with smooth animations and elegant transitions.
  */
 import React, { useState, useMemo, useEffect } from 'react';
-import Select from 'react-select';
+import { CustomSelect } from './CustomSelect';
 import { loadContinentRegions } from '@utils/loadContinentRegions';
 import { logger } from '@utils/logger';
 
@@ -56,7 +56,7 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
   }, []);
 
   // Group regions by continent
-  const groupRegions = (regions: string[]): Record<string, RegionOption[]> => {
+  const groupRegions = (regions: string[], disabledRegion?: string | null): { label: string; options: RegionOption[] }[] => {
     const result: Record<string, RegionOption[]> = {};
     
     for (const continent of Object.keys(continentData)) {
@@ -68,76 +68,47 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
       let placed = false;
       for (const [continent, regionList] of Object.entries(continentData)) {
         if (regionList.some(r => region.includes(r) || r.includes(region))) {
-          result[continent].push({ value: region, label: region });
+          result[continent].push({ 
+            value: region, 
+            label: region,
+            isDisabled: region === disabledRegion
+          });
           placed = true;
           break;
         }
       }
       
       if (!placed) {
-        result["Other"].push({ value: region, label: region });
+        result["Other"].push({ 
+          value: region, 
+          label: region,
+          isDisabled: region === disabledRegion 
+        });
       }
     }
     
-    for (const continent of Object.keys(result)) {
-      if (result[continent].length === 0) {
-        delete result[continent];
+    // Convert to grouped options format
+    const groupedOptions: { label: string; options: RegionOption[] }[] = [];
+    
+    for (const [group, options] of Object.entries(result)) {
+      if (options.length > 0) {
+        groupedOptions.push({ label: group, options });
       }
     }
     
-    return result;
+    return groupedOptions;
   };
-
-  // Filter options
-  const sourceOptions: RegionOption[] = useMemo(
-    () => regions.map((region) => ({
-      value: region,
-      label: region,
-      isDisabled: region === targetRegion,
-    })),
-    [regions, targetRegion]
-  );
-
-  const targetOptions: RegionOption[] = useMemo(
-    () => regions.map((region) => ({
-      value: region,
-      label: region,
-      isDisabled: region === sourceRegion,
-    })),
-    [regions, sourceRegion]
-  );
 
   // Group options by continent
   const groupedSourceOptions = useMemo(() => {
     if (!continentDataLoaded) return [];
-    const enabledOptions = sourceOptions.filter(opt => !opt.isDisabled);
-    const grouped = groupRegions(enabledOptions.map(opt => opt.value));
-    return Object.entries(grouped).map(([group, options]) => ({
-      label: group,
-      options: options
-    }));
-  }, [sourceOptions, continentDataLoaded]);
+    return groupRegions(regions, targetRegion);
+  }, [regions, targetRegion, continentDataLoaded]);
 
   const groupedTargetOptions = useMemo(() => {
     if (!continentDataLoaded) return [];
-    const enabledOptions = targetOptions.filter(opt => !opt.isDisabled);
-    const grouped = groupRegions(enabledOptions.map(opt => opt.value));
-    return Object.entries(grouped).map(([group, options]) => ({
-      label: group,
-      options: options
-    }));
-  }, [targetOptions, continentDataLoaded]);
-
-  // Find current values
-  const sourceOption = useMemo(
-    () => sourceOptions.find((option) => option.value === sourceRegion) || null,
-    [sourceOptions, sourceRegion]
-  );
-
-  const targetOption = useMemo(
-    () => targetOptions.find((option) => option.value === targetRegion) || null,
-    [targetOptions, targetRegion]
-  );
+    return groupRegions(regions, sourceRegion);
+  }, [regions, sourceRegion, continentDataLoaded]);
 
   // Handle swap with animation
   const handleSwap = () => {
@@ -147,80 +118,6 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
       onSwap();
       setIsSwapping(false);
     }, 400);
-  };
-
-  // Elegant custom styles for react-select
-  const customStyles = {
-    control: (provided: any, state: any) => ({
-      ...provided,
-      borderColor: state.isFocused ? '#3b82f6' : '#e2e8f0',
-      boxShadow: state.isFocused ? '0 0 0 2px rgba(59, 130, 246, 0.1)' : 'none',
-      background: state.isDisabled ? '#f8fafc' : 'white',
-      borderRadius: '0.5rem',
-      transition: 'all 0.2s ease',
-      '&:hover': {
-        borderColor: state.isFocused ? '#3b82f6' : '#94a3b8',
-      },
-      minHeight: '44px',
-      padding: '0 0.5rem',
-    }),
-    groupHeading: (provided: any) => ({
-      ...provided,
-      color: '#475569',
-      fontWeight: 600,
-      fontSize: '0.75rem',
-      textTransform: 'uppercase',
-      letterSpacing: '0.05em',
-      paddingTop: '0.75rem',
-      paddingBottom: '0.5rem',
-    }),
-    option: (provided: any, state: { isSelected: boolean; isFocused: boolean; isDisabled: boolean }) => ({
-      ...provided,
-      backgroundColor: state.isDisabled 
-        ? 'transparent' 
-        : state.isSelected
-          ? '#3b82f6'
-          : state.isFocused
-            ? '#eff6ff'
-            : undefined,
-      color: state.isDisabled 
-        ? '#94a3b8' 
-        : state.isSelected 
-          ? 'white' 
-          : '#0f172a',
-      cursor: state.isDisabled ? 'not-allowed' : 'pointer',
-      padding: '10px 15px',
-      fontSize: '0.95rem',
-      fontWeight: state.isSelected ? '500' : '400',
-      borderRadius: '0.25rem',
-      margin: '2px 0',
-      transition: 'all 0.15s ease',
-      '&:active': {
-        backgroundColor: state.isSelected ? '#2563eb' : '#dbeafe',
-      },
-    }),
-    menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
-    menu: (provided: any) => ({
-      ...provided,
-      borderRadius: '0.5rem',
-      boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-      padding: '0.5rem',
-      border: '1px solid #e2e8f0',
-    }),
-    container: (provided: any) => ({
-      ...provided,
-      width: '100%',
-    }),
-    placeholder: (provided: any) => ({
-      ...provided,
-      color: '#94a3b8',
-      fontWeight: '400',
-    }),
-    singleValue: (provided: any) => ({
-      ...provided,
-      fontWeight: 500,
-      color: '#1e293b',
-    }),
   };
 
   return (
@@ -241,25 +138,12 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
             Source Location
           </span>
         </label>
-        <Select
-          id="source-region"
-          instanceId="source-region-select"
-          isDisabled={disabled}
-          value={sourceOption}
-          onChange={(option) => option && onSourceChange(option.value)}
+        <CustomSelect
+          value={sourceRegion}
+          onChange={onSourceChange}
           options={groupedSourceOptions}
-          styles={customStyles}
           placeholder="Select source..."
-          className="react-select-container"
-          classNamePrefix="react-select"
-          menuPortalTarget={document.body}
-          menuPosition="fixed"
-          formatGroupLabel={(data) => (
-            <div className="flex items-center justify-between">
-              <span>{data.label}</span>
-              <span className="text-xs text-slate-500">{data.options.length}</span>
-            </div>
-          )}
+          isDisabled={disabled}
         />
       </div>
 
@@ -311,25 +195,12 @@ export const RegionSelector: React.FC<RegionSelectorProps> = ({
             Target Location
           </span>
         </label>
-        <Select
-          id="target-region"
-          instanceId="target-region-select"
-          isDisabled={disabled}
-          value={targetOption}
-          onChange={(option) => option && onTargetChange(option.value)}
+        <CustomSelect
+          value={targetRegion}
+          onChange={onTargetChange}
           options={groupedTargetOptions}
-          styles={customStyles}
           placeholder="Select target..."
-          className="react-select-container"
-          classNamePrefix="react-select"
-          menuPortalTarget={document.body}
-          menuPosition="fixed"
-          formatGroupLabel={(data) => (
-            <div className="flex items-center justify-between">
-              <span>{data.label}</span>
-              <span className="text-xs text-slate-500">{data.options.length}</span>
-            </div>
-          )}
+          isDisabled={disabled}
         />
       </div>
     </div>

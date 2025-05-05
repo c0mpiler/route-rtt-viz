@@ -62,12 +62,40 @@ export default defineConfig(({ mode }) => {
       },
       rollupOptions: {
         output: {
-          manualChunks: {
-            'vendor-react': ['react', 'react-dom'],
-            'vendor-d3': ['d3'],
-            'vendor-chart': ['chart.js', 'react-chartjs-2'],
-            'vendor-three': ['three'],
-            'vendor-ui': ['react-select', 'framer-motion'],
+          manualChunks: (id) => {
+            // Generate more optimized chunks
+            if (id.includes('node_modules')) {
+              if (id.includes('react')) {
+                return 'vendor-react';
+              }
+              if (id.includes('d3')) {
+                return 'vendor-d3';
+              }
+              if (id.includes('chart.js')) {
+                return 'vendor-chart';
+              }
+              if (id.includes('three')) {
+                return 'vendor-three';
+              }
+              if (id.includes('framer-motion')) {
+                return 'vendor-motion';
+              }
+              return 'vendor'; // all other packages
+            }
+            
+            // Split app code
+            if (id.includes('/components/')) {
+              return 'components';
+            }
+            if (id.includes('/utils/')) {
+              return 'utils';
+            }
+            if (id.includes('/hooks/')) {
+              return 'hooks';
+            }
+            if (id.includes('/workers/')) {
+              return 'workers';
+            }
           },
           entryFileNames: "assets/[name]-[hash].js",
           chunkFileNames: "assets/[name]-[hash].js",
@@ -113,11 +141,7 @@ export default defineConfig(({ mode }) => {
         'react-dom', 
         'd3', 
         'chart.js', 
-        'react-select', 
-        'framer-motion',
-        '@emotion/react',
-        '@emotion/styled',
-        '@emotion/cache'
+        'framer-motion'
       ], // Pre-bundle these dependencies
       exclude: [], // Don't pre-bundle these
     },

@@ -16,7 +16,7 @@ async function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     try {
       // The base path needs to be the correct URL path
-      const base = '/route-radar';
+      const base = '/route-rtt-viz';
       
       // Check if we're in production (Github Pages) or development
       const isProd = import.meta.env.PROD;
