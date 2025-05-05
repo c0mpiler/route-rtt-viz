@@ -1,0 +1,10 @@
+node_modules
+dist
+public
+coverage
+.github
+*.config.js
+*.config.ts
+vite.config.ts.timestamp-*
+*.patch
+*.md
