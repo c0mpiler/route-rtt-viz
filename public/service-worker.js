@@ -1,31 +1,31 @@
 /**
- * Service Worker for IBM Cloud Latency Pathfinder
+ * Service Worker for Route Radar
  *
  * This service worker provides efficient caching strategies for
  * the application, focusing on static assets and data files.
  */
 
 // Cache name for version control
-const CACHE_NAME = 'ibmcloud-latency-cache-v1';
+const CACHE_NAME = 'route-radar-cache-v1';
 
 // App shell files to cache on install
 const APP_SHELL_FILES = [
-  '/ibmcloud-rtt-calc/',
-  '/ibmcloud-rtt-calc/index.html',
-  '/ibmcloud-rtt-calc/assets/index.css',
-  '/ibmcloud-rtt-calc/assets/index.js'
+  '/route-rtt-viz/',
+  '/route-rtt-viz/index.html',
+  '/route-rtt-viz/assets/index.css',
+  '/route-rtt-viz/assets/index.js'
 ];
 
 // Data files to cache
 const DATA_FILES = [
-  '/ibmcloud-rtt-calc/latency-data.json',
-  '/ibmcloud-rtt-calc/backup-latency-data.json',
-  '/ibmcloud-rtt-calc/coordinates-data.json',
-  '/ibmcloud-rtt-calc/continent-regions.json',
-  '/ibmcloud-rtt-calc/default-coordinates.json',
-  '/ibmcloud-rtt-calc/distant-regions.json',
-  '/ibmcloud-rtt-calc/essential-connections.json',
-  '/ibmcloud-rtt-calc/required-connections.json'
+  '/route-rtt-viz/latency-data.json',
+  '/route-rtt-viz/backup-latency-data.json',
+  '/route-rtt-viz/coordinates-data.json',
+  '/route-rtt-viz/continent-regions.json',
+  '/route-rtt-viz/default-coordinates.json',
+  '/route-rtt-viz/distant-regions.json',
+  '/route-rtt-viz/essential-connections.json',
+  '/route-rtt-viz/required-connections.json'
 ];
 
 // Combined files to cache

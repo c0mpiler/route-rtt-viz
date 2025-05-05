@@ -95,7 +95,7 @@ Route Radar is a sophisticated network latency visualization tool that transform
 
 Route Radar welcomes contributions! Whether you're fixing bugs, improving documentation, or adding features, your contribution matters.
 
-- Report issues on [GitHub](https://github.com/c0mpiler/ic-lat-calc/issues)
+- Report issues on [GitHub](https://github.com/c0mpiler/route-rtt-viz/issues)
 - Submit pull requests
 - Improve documentation
 - Share your use cases

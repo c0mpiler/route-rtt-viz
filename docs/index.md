@@ -30,7 +30,7 @@ docs/
 ## Support
 
 For issues, questions, or suggestions:
-- Open an [issue](https://github.com/c0mpiler/ic-lat-calc/issues)
+- Open an [issue](https://github.com/c0mpiler/route-rtt-viz/issues)
 - Email: c0mpiler@ins8s.dev
 
 Last updated: May 4, 2025 - Version 0.1.0 Beta

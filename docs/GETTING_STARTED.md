@@ -10,8 +10,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/c0mpiler/ic-lat-calc.git
-   cd ic-lat-calc
+   git clone https://github.com/c0mpiler/route-rtt-viz.git
+   cd route-rtt-viz
    ```
 
 2. Install dependencies:
@@ -29,7 +29,7 @@
 ## Project Structure
 
 ```
-/ic-lat-calc/
+/route-rtt-viz/
 ├── public/              # Static files and data
 │   ├── latency-data.json
 │   ├── coordinates-data.json

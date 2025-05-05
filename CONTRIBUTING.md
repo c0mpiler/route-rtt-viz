@@ -7,7 +7,7 @@ We welcome contributions to Route Radar! This guide will help you get started.
 1. Fork the repository
 2. Clone your fork:
 ```bash
-git clone https://github.com/your-username/ic-lat-calc.git
+git clone https://github.com/your-username/route-rtt-viz.git
 ```
 3. Install dependencies:
 ```bash

@@ -1,7 +1,7 @@
 {
-  "name": "ic-lat-calc-tools",
+  "name": "route-radar-tools",
   "version": "1.0.0",
-  "description": "Tools for IBM Cloud Latency Pathfinder",
+  "description": "Tools for Route Radar Network Visualization",
   "main": "update-rtt.js",
   "scripts": {
     "update": "node update-rtt.js",

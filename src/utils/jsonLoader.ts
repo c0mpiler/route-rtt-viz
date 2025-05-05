@@ -17,7 +17,7 @@ const jsonLogger = new Logger({ component: 'JsonLoader' });
  */
 export async function loadJson<T>(url: string): Promise<T> {
   // Adjust url paths to ensure they're properly prefixed
-  const adjustedUrl = url.startsWith('/') ? `${window.location.origin}/ibmcloud-rtt-calc${url}` : url;
+  const adjustedUrl = url.startsWith('/') ? `${window.location.origin}/route-rtt-viz${url}` : url;
   
   jsonLogger.debug(`Loading JSON from: ${adjustedUrl}`);
   const response = await fetch(adjustedUrl);

@@ -138,11 +138,11 @@ npm run deploy     # Deploy to GitHub Pages
 
 ## Production Deployment
 
-Route Radar is deployed at: [https://c0mpiler.github.io/ibmcloud-rtt-calc](https://c0mpiler.github.io/ibmcloud-rtt-calc)
+Route Radar is deployed at: [https://c0mpiler.github.io/route-rtt-viz](https://c0mpiler.github.io/route-rtt-viz)
 
 ## Support
 
-For issues, feature requests, or contributions, please visit our [GitHub Issues](https://github.com/c0mpiler/ic-lat-calc/issues) page.
+For issues, feature requests, or contributions, please visit our [GitHub Issues](https://github.com/c0mpiler/route-rtt-viz/issues) page.
 
 ## License
 
