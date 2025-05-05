@@ -5,7 +5,7 @@
 // Define the base paths for different deployment environments
 const BASE_PATHS = {
   development: '',
-  production: ''  // Using root for official GitHub Pages deployment
+  production: '/route-rtt-viz'
 } as const;
 
 // Detect if we're in development mode
@@ -26,8 +26,13 @@ export function getPublicAssetPath(fileName: string): string {
   // Ensure fileName starts without a slash
   const cleanFileName = fileName.startsWith('/') ? fileName.slice(1) : fileName;
   
-  // For both development and production, use direct root path
-  return `/${cleanFileName}`;
+  // For development, use direct root path
+  if (isDevelopment) {
+    return `/${cleanFileName}`;
+  }
+  
+  // For production, include the base path
+  return `${basePath}/${cleanFileName}`;
 }
 
 // Try multiple asset paths in order of preference
@@ -35,22 +40,45 @@ export async function loadAssetWithFallbacks(fileName: string): Promise<Response
   // Clean the filename
   const cleanFileName = fileName.startsWith('/') ? fileName.slice(1) : fileName;
   
-  // Use direct paths for both dev and prod since we're using root '/'
-  const possiblePaths = [
-    `/${cleanFileName}`,            // Root path
-    cleanFileName,                  // Direct file path
-  ];
+  // In development, use direct paths
+  if (isDevelopment) {
+    const possiblePaths = [
+      `/${cleanFileName}`,            // Root path
+      cleanFileName,                  // Direct file path
+      `./public/${cleanFileName}`,    // Public folder path (relative)
+    ];
 
-  for (const path of possiblePaths) {
-    try {
-      console.log(`[${isDevelopment ? 'DEV' : 'PROD'}] Attempting to load asset from: ${path}`);
-      const response = await fetch(path);
-      if (response.ok) {
-        console.log(`[${isDevelopment ? 'DEV' : 'PROD'}] Successfully loaded asset from: ${path}`);
-        return response;
+    for (const path of possiblePaths) {
+      try {
+        console.log(`[DEV] Attempting to load asset from: ${path}`);
+        const response = await fetch(path);
+        if (response.ok) {
+          console.log(`[DEV] Successfully loaded asset from: ${path}`);
+          return response;
+        }
+      } catch (error) {
+        console.warn(`[DEV] Failed to load from ${path}:`, error);
       }
-    } catch (error) {
-      console.warn(`[${isDevelopment ? 'DEV' : 'PROD'}] Failed to load from ${path}:`, error);
+    }
+  } else {
+    // Production paths
+    const possiblePaths = [
+      `/route-rtt-viz/${cleanFileName}`, // Production path with base
+      `/${cleanFileName}`,               // Root path fallback
+      cleanFileName,                     // Direct file path fallback
+    ];
+
+    for (const path of possiblePaths) {
+      try {
+        console.log(`[PROD] Attempting to load asset from: ${path}`);
+        const response = await fetch(path);
+        if (response.ok) {
+          console.log(`[PROD] Successfully loaded asset from: ${path}`);
+          return response;
+        }
+      } catch (error) {
+        console.warn(`[PROD] Failed to load from ${path}:`, error);
+      }
     }
   }
 
