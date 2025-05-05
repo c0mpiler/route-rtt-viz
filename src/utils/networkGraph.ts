@@ -1,51 +1,4 @@
-  /**
-   * Loads distant regions from the file system
-   */
-  private async loadDistantRegions(): Promise<string[]> {
-    try {
-      const response = await fetch('/distant-regions.json');
-      if (response.ok) {
-        const data = await response.json();
-        this.log(`Loaded ${data.regions.length} distant regions from file`);
-        return data.regions || [];
-      } else {
-        throw new Error(`Failed to load distant-regions.json: ${response.statusText}`);
-      }
-    } catch (error) {
-      this.log(`Error loading distant regions: ${error}`);
-      // Fallback to defaults
-      return [
-        "London", "Paris", "Mumbai", "Singapore", "Hong Kong", 
-        "Sydney", "Tokyo", "Sao Paulo", "Chennai", "Perth"
-      ];
-    }
-  }
-
-  /**
-   * Loads special region combinations from the file system
-   */
-  private async loadSpecialCombinations(): Promise<string[][]> {
-    try {
-      const response = await fetch('/distant-regions.json');
-      if (response.ok) {
-        const data = await response.json();
-        this.log(`Loaded ${data.specialCombinations?.length || 0} special combinations from file`);
-        return data.specialCombinations || [];
-      } else {
-        throw new Error(`Failed to load distant-regions.json: ${response.statusText}`);
-      }
-    } catch (error) {
-      this.log(`Error loading special combinations: ${error}`);
-      // Fallback to defaults
-      return [
-        ["London", "Mumbai", "Singapore"],
-        ["Paris", "Mumbai", "Hong Kong"],
-        ["London", "Hong Kong", "Sydney"],
-        ["Sao Paulo", "London", "Mumbai"],
-        ["Mumbai", "Singapore", "Sydney"]
-      ];
-    }
-  }/**
+/**
  * NetworkGraph - A specialized graph implementation for network latency calculations
  * 
  * This module implements a weighted graph data structure optimized for 
@@ -1235,5 +1188,54 @@ export class NetworkGraph {
     }
     
     return longestPath;
+  }
+
+  /**
+   * Loads distant regions from the file system
+   */
+  private async loadDistantRegions(): Promise<string[]> {
+    try {
+      const response = await fetch('/distant-regions.json');
+      if (response.ok) {
+        const data = await response.json();
+        this.log(`Loaded ${data.regions.length} distant regions from file`);
+        return data.regions || [];
+      } else {
+        throw new Error(`Failed to load distant-regions.json: ${response.statusText}`);
+      }
+    } catch (error) {
+      this.log(`Error loading distant regions: ${error}`);
+      // Fallback to defaults
+      return [
+        "London", "Paris", "Mumbai", "Singapore", "Hong Kong", 
+        "Sydney", "Tokyo", "Sao Paulo", "Chennai", "Perth"
+      ];
+    }
+  }
+
+  /**
+   * Loads special region combinations from the file system
+   */
+  private async loadSpecialCombinations(): Promise<string[][]> {
+    try {
+      const response = await fetch('/distant-regions.json');
+      if (response.ok) {
+        const data = await response.json();
+        this.log(`Loaded ${data.specialCombinations?.length || 0} special combinations from file`);
+        return data.specialCombinations || [];
+      } else {
+        throw new Error(`Failed to load distant-regions.json: ${response.statusText}`);
+      }
+    } catch (error) {
+      this.log(`Error loading special combinations: ${error}`);
+      // Fallback to defaults
+      return [
+        ["London", "Mumbai", "Singapore"],
+        ["Paris", "Mumbai", "Hong Kong"],
+        ["London", "Hong Kong", "Sydney"],
+        ["Sao Paulo", "London", "Mumbai"],
+        ["Mumbai", "Singapore", "Sydney"]
+      ];
+    }
   }
 }
