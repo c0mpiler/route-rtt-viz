@@ -172,7 +172,7 @@ export const perfMonitor = new PerformanceMonitor();
  * @returns Result of the function (may be a Promise if fn is async)
  */
 export function trackPerformance<T>(name: string, fn: () => T | Promise<T>): T | Promise<T> {
-  let uniqueTrackingId = `${name}:${Date.now().toString(36)}:${Math.random().toString(36).substring(2, 7)}`;
+  const uniqueTrackingId = `${name}:${Date.now().toString(36)}:${Math.random().toString(36).substring(2, 7)}`;
   let tracking = false;
   
   try {

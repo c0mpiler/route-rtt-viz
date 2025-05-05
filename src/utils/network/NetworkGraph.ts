@@ -753,7 +753,7 @@ export class NetworkGraph {
     shortestPath: Path
   ): Promise<Path> {
     // Initialize with the shortest path
-    let candidatePaths: Path[] = [shortestPath];
+    const candidatePaths: Path[] = [shortestPath];
     
     // Load distant regions for path exploration
     const distantRegions = await this.loadDistantRegions();

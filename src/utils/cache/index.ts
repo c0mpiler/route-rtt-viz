@@ -1,12 +1,27 @@
 /**
  * Cache Module - Exports for persistent caching system
  */
-export { 
+import { 
   PersistentCache, 
   CacheManager, 
   CacheKeys, 
   createTypedCache 
 } from './persistentCache';
+
+import { 
+  CacheStrategyManager,
+  CacheInvalidator,
+  CachePreloader,
+  CachePerformanceMonitor,
+  CacheWarmer
+} from './strategies';
+
+export { 
+  PersistentCache, 
+  CacheManager, 
+  CacheKeys, 
+  createTypedCache 
+};
 
 export type { 
   CacheOptions, 
@@ -19,7 +34,7 @@ export {
   CachePreloader,
   CachePerformanceMonitor,
   CacheWarmer
-} from './strategies';
+};
 
 export type { 
   CacheStrategy, 
@@ -42,15 +57,6 @@ let _cacheWarmer: CacheWarmer | null = null;
 // Initialize cache instances lazily
 function getCacheInstances() {
   if (!_mainCache) {
-    const { CacheManager, createTypedCache } = require('./persistentCache');
-    const { 
-      CacheStrategyManager, 
-      CacheInvalidator, 
-      CachePreloader, 
-      CachePerformanceMonitor, 
-      CacheWarmer 
-    } = require('./strategies');
-    
     _mainCache = CacheManager.getCache('main', {
       maxItems: 1000,
       ttl: 24 * 60 * 60 * 1000 // 24 hours
