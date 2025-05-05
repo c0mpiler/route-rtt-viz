@@ -1,10 +1,10 @@
 /**
  * Footer - Application footer component
- * 
+ *
  * This component renders the application footer with copyright information
  * and external links.
  */
-import React from 'react';
+import React from "react";
 
 /**
  * Application footer component
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
           </p>
           <div className="flex space-x-4">
             <a
-              href="https://github.com/c0mpiler/route-radar"
+              href="https://github.com/c0mpiler/route-rtt-viz"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary-600 hover:text-primary-800 transition-colors duration-150 flex items-center"

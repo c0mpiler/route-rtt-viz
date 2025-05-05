@@ -1,5 +1,5 @@
 {
-  "name": "route-radar",
+  "name": "route-rtt-viz",
   "version": "0.1.0",
   "description": "Route Radar - Interactive visualization tool for network latency between any regions",
   "private": true,

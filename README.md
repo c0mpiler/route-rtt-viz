@@ -33,7 +33,7 @@ chmod +x run-dev.sh
 ./run-dev.sh
 ```
 
-Access at: `http://localhost:3000/route-radar/`
+Access at: `http://localhost:3000/route-rtt-viz/`
 
 ## Features
 
@@ -147,10 +147,6 @@ For issues, feature requests, or contributions, please visit our [GitHub Issues]
 ## License
 
 [MIT](LICENSE) © 2025 Harsha
-
-## Acknowledgments
-
-Built with ❤️ by [Harsha](mailto:c0mpiler@ins8s.dev) for network optimization enthusiasts worldwide.
 
 ---
 

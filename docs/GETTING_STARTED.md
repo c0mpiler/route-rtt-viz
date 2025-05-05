@@ -24,7 +24,7 @@
    npm run dev
    ```
 
-4. Open your browser to `http://localhost:3000/route-radar/`
+4. Open your browser to `http://localhost:3000/route-rtt-viz/`
 
 ## Project Structure
 
@@ -77,7 +77,7 @@
 Create a `.env` file for custom configuration:
 
 ```env
-VITE_PUBLIC_URL=/route-radar/
+VITE_PUBLIC_URL=/route-rtt-viz/
 VITE_API_ENDPOINT=https://api.example.com
 ```
 
