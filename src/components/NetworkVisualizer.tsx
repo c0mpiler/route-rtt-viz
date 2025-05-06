@@ -220,6 +220,7 @@ export const NetworkVisualizer: React.FC<NetworkVisualizerProps> = ({
       }
       
       if (highlightedFilter === 'alternative' && paths && paths.length > 1) {
+        // Check if region is in any alternative path (all paths except the first one)
         for (let i = 1; i < paths.length; i++) {
           if (paths[i] && paths[i].route && paths[i].route.includes(region)) {
             return true;
@@ -369,7 +370,7 @@ export const NetworkVisualizer: React.FC<NetworkVisualizerProps> = ({
     
     // If we have an active highlight, only show links in that specific path
     if (highlightedFilter) {
-      if (highlightedFilter === 'fastest' && paths && paths.length > 0 && paths[0] && 
+      if (highlightedFilter === 'fastest' && paths && paths.length > 0 && 
           isLinkInPath(link, paths[0])) {
         return colors.fastestDark; // Dark cyan for highlighted fastest path
       }

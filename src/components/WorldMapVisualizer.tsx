@@ -1047,12 +1047,12 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
           return pathData; // Return empty array if no path type is selected
         }
 
-        // Add fastest path if filter is enabled
-        if (showFastest && paths && paths.length > 0 && paths[0]) {
+        // Add fastest path if filter is enabled (only the first path)
+        if (showFastest && paths && paths.length > 0) {
           allPaths.push(paths[0]);
         }
 
-        // Add alternative paths if filter is enabled
+        // Add alternative paths if filter is enabled (all paths except the first)
         if (showAlternative && paths && paths.length > 1) {
           for (let i = 1; i < paths.length; i++) {
             if (paths[i]) allPaths.push(paths[i]);

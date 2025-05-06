@@ -150,14 +150,31 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
     return (
       <>
-        {/* Fastest paths - each in full width */}
-        {filters.fastest && shortestPaths.map((path, index) => (
-          <div key={`path-${index}`} className="col-span-full">
+        {/* Fastest path - only the first path in shortestPaths */}
+        {filters.fastest && shortestPaths.length > 0 && (
+          <div key="fastest-path" className="col-span-full">
+            <LazyComponent
+              component={
+                <RouteCard
+                  path={shortestPaths[0]}
+                  index={0}
+                  isLongest={false}
+                  maxLatency={maxLatency}
+                />
+              }
+              loadingMessage="Loading path details..."
+            />
+          </div>
+        )}
+        
+        {/* Alternative paths - all paths after the first */}
+        {filters.alternative && shortestPaths.slice(1).map((path, index) => (
+          <div key={`alternative-path-${index}`} className="col-span-full">
             <LazyComponent
               component={
                 <RouteCard
                   path={path}
-                  index={index}
+                  index={index + 1}
                   isLongest={false}
                   maxLatency={maxLatency}
                 />
@@ -225,6 +242,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             onDoubleClick={() => isolateFilter('alternative')}
             color="bg-indigo-600"
             label="Alternative"
+            count={shortestPaths.length > 1 ? shortestPaths.length - 1 : 0}
           />
           <FilterToggle
             isActive={filters.longestBetween}
