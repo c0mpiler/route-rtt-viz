@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-0.1.0--beta-green.svg)](CHANGELOG.md)
 
-![Route Radar Screenshot](/docs/imgs/dashboard-layout.png)
+![Route Radar Screenshot](/docs/app-fullpage-screenshot.png)
 
 ## Overview
 
@@ -46,7 +46,7 @@ Access at: `http://localhost:3000/route-rtt-viz/`
 ### Advanced Analytics
 - Shortest path calculation using Dijkstra's algorithm
 - Longest path discovery for worst-case scenarios
-- Alternative route finding for redundancy planning 
+- Alternative route finding for redundancy planning
 - Hop-by-hop latency analysis
 
 ### Data Management
