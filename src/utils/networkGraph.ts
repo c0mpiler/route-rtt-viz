@@ -228,7 +228,7 @@ export class NetworkGraph {
         let connected = false;
         
         // Try connecting to a hub node first
-        const hubNodes = ["New York", "Chicago", "London", "Tokyo", "Seattle"];
+        const hubNodes = ["Dallas", "Washington DC", "London", "Tokyo", "Frankfurt"];
         for (const hub of hubNodes) {
           if (hub !== region && this.regions.has(hub)) {
             // Connect to the hub with a reasonable latency
@@ -328,9 +328,9 @@ export class NetworkGraph {
       this.log(`Error loading required connections: ${error}`);
       // Fallback to defaults if loading fails
       this.requiredConnections = [
-        { source: "Chicago", target: "Dallas", latency: 24 },
-        { source: "New York", target: "Seattle", latency: 40 },
-        { source: "New York", target: "Washington DC", latency: 6 }
+        { source: "Dallas", target: "Frankfurt", latency: 90 },
+        { source: "London", target: "Tokyo", latency: 220 },
+        { source: "Washington DC", target: "Toronto", latency: 28 }
       ];
       throw error; // Re-throw to trigger fallback in constructor
     }
@@ -1207,8 +1207,8 @@ export class NetworkGraph {
       this.log(`Error loading distant regions: ${error}`);
       // Fallback to defaults
       return [
-        "London", "Paris", "Mumbai", "Singapore", "Hong Kong", 
-        "Sydney", "Tokyo", "Sao Paulo", "Chennai", "Perth"
+        "London", "Frankfurt", "Chennai", "Sydney", "Tokyo", 
+        "Osaka", "Madrid", "Sao Paulo", "Toronto", "Montreal"
       ];
     }
   }
@@ -1230,11 +1230,11 @@ export class NetworkGraph {
       this.log(`Error loading special combinations: ${error}`);
       // Fallback to defaults
       return [
-        ["London", "Mumbai", "Singapore"],
-        ["Paris", "Mumbai", "Hong Kong"],
-        ["London", "Hong Kong", "Sydney"],
-        ["Sao Paulo", "London", "Mumbai"],
-        ["Mumbai", "Singapore", "Sydney"]
+        ["London", "Chennai", "Tokyo"],
+        ["Frankfurt", "Chennai", "Sydney"],
+        ["London", "Tokyo", "Sydney"],
+        ["Sao Paulo", "London", "Chennai"],
+        ["Madrid", "Tokyo", "Sydney"]
       ];
     }
   }

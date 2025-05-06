@@ -68,19 +68,19 @@ export const FilterableLegend: React.FC<FilterableLegendProps> = ({
     },
     {
       id: 'longestBetween',
-      label: `Longest Path Between${sourceRegion && targetRegion ? ` ${sourceRegion} and ${targetRegion}` : ''}`,
+      label: `Maximum Latency${sourceRegion && targetRegion ? ` (${sourceRegion} ⟷ ${targetRegion})` : ' (Selected Regions)'}`,
       color: colors.longestBetween,
       bgColor: 'bg-amber-500/5',
       borderColor: 'border-amber-500',
-      description: 'The longest/worst-case path between selected regions'
+      description: 'The highest latency path between your selected regions'
     },
     {
       id: 'longestOverall',
-      label: 'Overall Longest Path',
+      label: 'Network-Wide Maximum Latency',
       color: colors.longestOverall,
       bgColor: 'bg-rose-700/5',
       borderColor: 'border-rose-700',
-      description: 'The overall longest path across the entire network'
+      description: 'The highest latency path across the entire network'
     }
   ];
   

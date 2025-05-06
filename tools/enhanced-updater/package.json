@@ -1,0 +1,18 @@
+{
+  "name": "route-radar-enhanced-updater",
+  "version": "1.0.0",
+  "description": "Enhanced latency data updater for Route Radar",
+  "main": "data-updater.js",
+  "scripts": {
+    "start": "node data-updater.js",
+    "update": "node data-updater.js",
+    "update:dry": "node data-updater.js --dry-run",
+    "update:inter-region": "node data-updater.js --inter-region",
+    "update:intra-az": "node data-updater.js --intra-az"
+  },
+  "author": "Harsha <c0mpiler@ins8s.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}

@@ -5,18 +5,17 @@
 ### User Documentation
 - [README.md](../README.md) - Project overview and quick start
 - [GETTING_STARTED.md](GETTING_STARTED.md) - Installation and setup guide
-- [RELEASE_NOTES.md](../RELEASE_NOTES.md) - What's new in v0.1.0
-- [PROJECT_SUMMARY.md](../PROJECT_SUMMARY.md) - High-level project overview
 
 ### Technical Documentation
 - [API.md](API.md) - API reference and technical details
-- [TECHNICAL-ARCHITECTURE.md](../TECHNICAL-ARCHITECTURE.md) - System architecture
-- [RTT-UPDATE-GUIDE.md](../RTT-UPDATE-GUIDE.md) - Data management guide
+- [TECHNICAL-ARCHITECTURE.md](TECHNICAL-ARCHITECTURE.md) - System architecture
+- [RTT-UPDATE-GUIDE.md](RTT-UPDATE-GUIDE.md) - Data management guide
+- [IBM-CLOUD-LATENCY.md](IBM-CLOUD-LATENCY.md) - IBM Cloud latency integration
 
 ### Development Documentation
-- [CONTRIBUTING.md](../CONTRIBUTING.md) - Contributing guidelines
-- [CHANGELOG.md](../CHANGELOG.md) - Release history
-- [SECURITY.md](../SECURITY.md) - Security policies
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contributing guidelines
+- [CHANGELOG.md](CHANGELOG.md) - Release history
+- [SECURITY.md](SECURITY.md) - Security policies
 
 ### GitHub Templates
 - [bug_report.md](../.github/ISSUE_TEMPLATE/bug_report.md) - Bug report template
@@ -36,17 +35,17 @@
 3. Explore [examples/](../examples/)
 
 ### For Contributors
-1. Read [CONTRIBUTING.md](../CONTRIBUTING.md)
-2. Review [TECHNICAL-ARCHITECTURE.md](../TECHNICAL-ARCHITECTURE.md)
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md)
+2. Review [TECHNICAL-ARCHITECTURE.md](TECHNICAL-ARCHITECTURE.md)
 3. Check [API.md](API.md) for integration
 
 ### For Maintainers
 1. Use [release_checklist.md](../.github/ISSUE_TEMPLATE/release_checklist.md)
-2. Update [CHANGELOG.md](../CHANGELOG.md)
-3. Follow [SECURITY.md](../SECURITY.md) policies
+2. Update [CHANGELOG.md](CHANGELOG.md)
+3. Follow [SECURITY.md](SECURITY.md) policies
 
 ---
 
 This documentation is for Route Radar v0.1.0 Beta
 
-Last updated: May 4, 2025
+Last updated: May 5, 2025

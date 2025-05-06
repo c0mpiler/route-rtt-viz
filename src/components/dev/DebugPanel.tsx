@@ -13,6 +13,7 @@ import { NetworkGraph } from '../../utils/network/NetworkGraph';
 import { Path } from '../../types/network';
 import { motion } from 'framer-motion';
 import { EnhancedDebugTools } from './EnhancedDebugTools';
+import LatencyTest from './LatencyTest';
 
 interface DebugPanelProps {
   graph: NetworkGraph | null;
@@ -38,7 +39,8 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
   const [expandedSections, setExpandedSections] = useState({
     network: true,
     performance: false,
-    data: false
+    data: false,
+    ibmCloud: false
   });
 
   const toggleSection = (section: keyof typeof expandedSections) => {
@@ -229,6 +231,44 @@ export const DebugPanel: React.FC<DebugPanelProps> = ({
                     Graph
                   </button>
                 </div>
+              </div>
+            </motion.div>
+          )}
+        </motion.div>
+        
+        {/* IBM Cloud Latency Section */}
+        <motion.div 
+          layout 
+          className="border-b border-secondary-200"
+        >
+          <button
+            onClick={() => toggleSection('ibmCloud')}
+            className="w-full flex items-center justify-between p-4 hover:bg-secondary-50 transition-colors"
+          >
+            <div className="flex items-center">
+              <svg className="h-5 w-5 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-medium text-secondary-900">IBM Cloud Latency</span>
+            </div>
+            <svg 
+              className={`h-5 w-5 text-secondary-500 transition-transform ${expandedSections.ibmCloud ? 'rotate-180' : ''}`} 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {expandedSections.ibmCloud && (
+            <motion.div 
+              initial={{ height: 0 }}
+              animate={{ height: 'auto' }}
+              exit={{ height: 0 }}
+              className="overflow-hidden"
+            >
+              <div className="p-4 pt-0">
+                <LatencyTest />
               </div>
             </motion.div>
           )}

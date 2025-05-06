@@ -404,9 +404,9 @@ export function useNetworkGraph(): UseNetworkGraphResult {
       return { source: null, target: null };
     }
     
-    // Choose regions with interesting locations
-    let source = 'New York';
-    let target = 'Seattle';
+    // Choose regions from our IBM Cloud dataset
+    let source = 'Dallas';
+    let target = 'London';
     
     // Fall back if our preferred regions don't exist
     if (!availableRegions.includes(source)) {

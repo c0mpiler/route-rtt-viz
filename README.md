@@ -35,31 +35,32 @@ chmod +x run-dev.sh
 
 Access at: `http://localhost:3000/route-rtt-viz/`
 
-## Features
+## Core Capabilities
 
-### Visualization Modes
-- **Network Graph**: Force-directed topology with geographic positioning
-- **World Map**: Geographic visualization with animated path traversal
-- **Latency Charts**: Comparative analysis of path performance
-- **Path Explorer**: Detailed hop-by-hop analysis
+### Network Visualization
+- Interactive network graphs with geographic positioning
+- Animated path traversal visualization
+- Color-coded latency indicators
+- Multiple visualization modes for different insights
 
-### Path Analysis
-- 🎯 Shortest path calculation (Dijkstra's algorithm)
-- 📈 Longest path discovery for worst-case scenarios
-- 🔄 Alternative paths for redundancy planning
-- 🌊 Animated data flow visualization
+### Advanced Analytics
+- Shortest path calculation using Dijkstra's algorithm
+- Longest path discovery for worst-case scenarios
+- Alternative route finding for redundancy planning 
+- Hop-by-hop latency analysis
 
 ### Data Management
-- 📥 Import JSON/CSV RTT data
-- 📤 Export visualizations (CSV, JSON, PNG, PDF)
-- 💾 Persistent caching for performance
-- 🔍 Data validation and error handling
+- Support for JSON and CSV data formats
+- Real-time data import and validation
+- Comprehensive export options
+- Backup and fallback mechanisms
+- Automated IBM Cloud latency data scraping tools
 
-### Performance Features
-- 📜 Virtual scrolling for large datasets
-- 🕸️ Web Workers for calculations
-- 🔄 Multi-tier caching system
-- ⚡ Optimized rendering
+### Performance Engineering
+- Virtual scrolling for large datasets (100+ routes)
+- Web Workers for non-blocking calculations
+- Multi-tier caching system
+- IndexedDB persistence
 
 ## Data Format
 
@@ -111,10 +112,11 @@ us-east-1,eu-west-1,85.5
 
 ## Documentation
 
-- [Technical Architecture](TECHNICAL-ARCHITECTURE.md) - Deep dive into system design
-- [RTT Data Guide](RTT-UPDATE-GUIDE.md) - Data management utilities
-- [Contributing](CONTRIBUTING.md) - Development guidelines
-- [Changelog](CHANGELOG.md) - Release history
+- [Technical Architecture](docs/TECHNICAL-ARCHITECTURE.md) - Deep dive into system design
+- [RTT Data Guide](docs/RTT-UPDATE-GUIDE.md) - Data management utilities
+- [IBM Cloud Scraper](tools/scraper/README.md) - Tools for scraping IBM Cloud latency data
+- [Contributing](docs/CONTRIBUTING.md) - Development guidelines
+- [Changelog](docs/CHANGELOG.md) - Release history
 
 ## Development
 
@@ -130,10 +132,13 @@ src/
 
 ### Build Commands
 ```bash
-npm run dev        # Development server
-npm run build      # Production build
-npm run preview    # Preview build
-npm run deploy     # Deploy to GitHub Pages
+npm run dev                  # Development server
+npm run build                # Production build
+npm run preview              # Preview build
+npm run deploy               # Deploy to GitHub Pages
+npm run update-ibm-latency   # Update IBM Cloud inter-region latency data
+npm run update-intra-az      # Update IBM Cloud intra-AZ latency data
+npm run update-ibm-all       # Update all IBM Cloud latency data
 ```
 
 ## Production Deployment

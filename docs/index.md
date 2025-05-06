@@ -1,36 +1,55 @@
 # Route Radar Documentation
 
-Welcome to the Route Radar documentation! This page serves as an index for all available documentation.
+Welcome to the Route Radar documentation! This documentation will help you get started with Route Radar, understand its architecture, and learn how to contribute to the project.
 
 ## Quick Links
 
-- [Getting Started](GETTING_STARTED.md) - Installation and quick setup guide
-- [API Documentation](API.md) - Technical API reference
-- [Technical Architecture](../TECHNICAL-ARCHITECTURE.md) - Deep dive into system design
-- [RTT Data Guide](../RTT-UPDATE-GUIDE.md) - Managing RTT data
-- [Security](../SECURITY.md) - Security policies and reporting
-- [Contributing](../CONTRIBUTING.md) - How to contribute
-- [Changelog](../CHANGELOG.md) - Release history
+- [Main Project README](../README.md)
+- [Getting Started Guide](GETTING_STARTED.md)
+- [API Documentation](API.md)
+- [Technical Architecture](TECHNICAL-ARCHITECTURE.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+- [RTT Update Guide](RTT-UPDATE-GUIDE.md)
+- [Security](SECURITY.md)
+
+## What is Route Radar?
+
+Route Radar is a sophisticated network latency visualization tool that transforms complex RTT (Round-Trip Time) data into actionable insights. Initially developed for network optimization, it has evolved into a universal platform supporting any network topology.
+
+## Key Features
+
+- Interactive network visualizations with multiple view modes
+- Advanced path analysis (shortest, longest, alternative paths)
+- Data import/export with JSON and CSV support
+- Performance optimized for large datasets
 
 ## Documentation Structure
 
-```
-docs/
-├── index.md                  # This file
-├── GETTING_STARTED.md        # Quick start guide
-├── API.md                    # API documentation
-├── TECHNICAL-ARCHITECTURE.md # System architecture
-├── RTT-UPDATE-GUIDE.md       # Data management
-└── examples/                 # Sample data files
-    └── data/
-        ├── sample-latency-data.json
-        └── sample-latency-data.csv
-```
+- **[GETTING_STARTED.md](GETTING_STARTED.md)**: Installation and basic usage
+- **[API.md](API.md)**: Core API reference for integration
+- **[TECHNICAL-ARCHITECTURE.md](TECHNICAL-ARCHITECTURE.md)**: In-depth technical details
+- **[RTT-UPDATE-GUIDE.md](RTT-UPDATE-GUIDE.md)**: How to update network latency data
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: Guidelines for contributors
+- **[CHANGELOG.md](CHANGELOG.md)**: History of releases and changes
+- **[SECURITY.md](SECURITY.md)**: Security policy and vulnerability reporting
 
-## Support
+## Examples
 
-For issues, questions, or suggestions:
-- Open an [issue](https://github.com/c0mpiler/route-rtt-viz/issues)
-- Email: c0mpiler@ins8s.dev
+Check out the [examples directory](../examples/) for sample data files that demonstrate how to format your network data for use with Route Radar.
 
-Last updated: May 4, 2025 - Version 0.1.0 Beta
+## Getting Help
+
+If you have questions or need help:
+
+1. Check the [documentation index](DOCUMENTATION_INDEX.md) for guidance
+2. [Open an issue](https://github.com/c0mpiler/route-rtt-viz/issues) on GitHub
+3. Contact the maintainer at c0mpiler@ins8s.dev
+
+## License
+
+Route Radar is released under the [MIT License](../LICENSE).
+
+---
+
+Last updated: May 5, 2025

@@ -3,62 +3,62 @@
     {
       "source": "Dallas",
       "target": "Washington DC",
-      "rtt": 25
+      "rtt": 24
     },
     {
       "source": "Dallas",
       "target": "Toronto",
-      "rtt": 36
+      "rtt": 34
     },
     {
       "source": "Dallas",
       "target": "Sao Paulo",
-      "rtt": 122
+      "rtt": 124
     },
     {
       "source": "Dallas",
       "target": "London",
-      "rtt": 88
+      "rtt": 82
     },
     {
       "source": "Dallas",
       "target": "Frankfurt",
-      "rtt": 89
+      "rtt": 90
     },
     {
       "source": "Dallas",
       "target": "Madrid",
-      "rtt": 98
+      "rtt": 94
     },
     {
       "source": "Dallas",
       "target": "Sydney",
-      "rtt": 178
+      "rtt": 185
     },
     {
       "source": "Dallas",
       "target": "Tokyo",
-      "rtt": 152
+      "rtt": 143
     },
     {
       "source": "Dallas",
       "target": "Osaka",
-      "rtt": 215
+      "rtt": 223
     },
     {
       "source": "Dallas",
       "target": "Montreal",
-      "rtt": 208
+      "rtt": 215
     },
     {
       "source": "Dallas",
       "target": "Chennai",
-      "rtt": 195
+      "rtt": 210
     },
     {
       "source": "Washington DC",
       "target": "Dallas",
-      "rtt": 25
+      "rtt": 24
     },
     {
       "source": "Washington DC",
@@ -68,32 +68,32 @@
     {
       "source": "Washington DC",
       "target": "Sao Paulo",
-      "rtt": 120
+      "rtt": 131
     },
     {
       "source": "Washington DC",
       "target": "London",
-      "rtt": 82
+      "rtt": 79
     },
     {
       "source": "Washington DC",
       "target": "Frankfurt",
-      "rtt": 86
+      "rtt": 87
     },
     {
       "source": "Washington DC",
       "target": "Madrid",
-      "rtt": 230
+      "rtt": 227
     },
     {
       "source": "Washington DC",
       "target": "Sydney",
-      "rtt": 103
+      "rtt": 97
     },
     {
       "source": "Washington DC",
       "target": "Tokyo",
-      "rtt": 143
+      "rtt": 141
     },
     {
       "source": "Washington DC",
@@ -103,17 +103,17 @@
     {
       "source": "Washington DC",
       "target": "Montreal",
-      "rtt": 32
+      "rtt": 30
     },
     {
       "source": "Washington DC",
       "target": "Chennai",
-      "rtt": 73
+      "rtt": 72
     },
     {
       "source": "Toronto",
       "target": "Dallas",
-      "rtt": 36
+      "rtt": 34
     },
     {
       "source": "Toronto",
@@ -123,37 +123,37 @@
     {
       "source": "Toronto",
       "target": "Sao Paulo",
-      "rtt": 216
+      "rtt": 219
     },
     {
       "source": "Toronto",
       "target": "London",
-      "rtt": 89
+      "rtt": 88
     },
     {
       "source": "Toronto",
       "target": "Frankfurt",
-      "rtt": 95
+      "rtt": 99
     },
     {
       "source": "Toronto",
       "target": "Madrid",
-      "rtt": 115
+      "rtt": 110
     },
     {
       "source": "Toronto",
       "target": "Sydney",
-      "rtt": 228
-    },
-    {
-      "source": "Toronto",
-      "target": "Tokyo",
       "rtt": 235
     },
     {
       "source": "Toronto",
+      "target": "Tokyo",
+      "rtt": 237
+    },
+    {
+      "source": "Toronto",
       "target": "Osaka",
-      "rtt": 211
+      "rtt": 209
     },
     {
       "source": "Toronto",
@@ -163,142 +163,142 @@
     {
       "source": "Toronto",
       "target": "Chennai",
-      "rtt": 201
+      "rtt": 195
     },
     {
       "source": "Sao Paulo",
       "target": "Dallas",
-      "rtt": 122
+      "rtt": 124
     },
     {
       "source": "Sao Paulo",
       "target": "Washington DC",
-      "rtt": 120
+      "rtt": 131
     },
     {
       "source": "Sao Paulo",
       "target": "Toronto",
-      "rtt": 213
+      "rtt": 221
     },
     {
       "source": "Sao Paulo",
       "target": "London",
-      "rtt": 94
+      "rtt": 92
     },
     {
       "source": "Sao Paulo",
       "target": "Frankfurt",
-      "rtt": 99
+      "rtt": 97
     },
     {
       "source": "Sao Paulo",
       "target": "Madrid",
-      "rtt": 105
+      "rtt": 107
     },
     {
       "source": "Sao Paulo",
       "target": "Sydney",
-      "rtt": 330
+      "rtt": 307
     },
     {
       "source": "Sao Paulo",
       "target": "Tokyo",
-      "rtt": 296
+      "rtt": 288
     },
     {
       "source": "Sao Paulo",
       "target": "Osaka",
-      "rtt": 218
+      "rtt": 226
     },
     {
       "source": "Sao Paulo",
       "target": "Montreal",
-      "rtt": 210
+      "rtt": 202
     },
     {
       "source": "Sao Paulo",
       "target": "Chennai",
-      "rtt": 196
+      "rtt": 192
     },
     {
       "source": "London",
       "target": "Dallas",
+      "rtt": 82
+    },
+    {
+      "source": "London",
+      "target": "Washington DC",
+      "rtt": 79
+    },
+    {
+      "source": "London",
+      "target": "Toronto",
       "rtt": 88
     },
     {
       "source": "London",
-      "target": "Washington DC",
-      "rtt": 82
-    },
-    {
-      "source": "London",
-      "target": "Toronto",
-      "rtt": 89
-    },
-    {
-      "source": "London",
       "target": "Sao Paulo",
-      "rtt": 97
+      "rtt": 98
     },
     {
       "source": "London",
       "target": "Frankfurt",
-      "rtt": 14
+      "rtt": 15
     },
     {
       "source": "London",
       "target": "Madrid",
-      "rtt": 31
+      "rtt": 30
     },
     {
       "source": "London",
       "target": "Sydney",
-      "rtt": 259
+      "rtt": 248
     },
     {
       "source": "London",
       "target": "Tokyo",
-      "rtt": 217
+      "rtt": 220
     },
     {
       "source": "London",
       "target": "Osaka",
-      "rtt": 99
+      "rtt": 96
     },
     {
       "source": "London",
       "target": "Montreal",
-      "rtt": 82
+      "rtt": 88
     },
     {
       "source": "London",
       "target": "Chennai",
-      "rtt": 77
+      "rtt": 82
     },
     {
       "source": "Frankfurt",
       "target": "Dallas",
-      "rtt": 89
+      "rtt": 90
     },
     {
       "source": "Frankfurt",
       "target": "Washington DC",
-      "rtt": 86
+      "rtt": 87
     },
     {
       "source": "Frankfurt",
       "target": "Toronto",
-      "rtt": 97
+      "rtt": 99
     },
     {
       "source": "Frankfurt",
       "target": "Sao Paulo",
-      "rtt": 94
+      "rtt": 90
     },
     {
       "source": "Frankfurt",
       "target": "London",
-      "rtt": 14
+      "rtt": 15
     },
     {
       "source": "Frankfurt",
@@ -308,22 +308,22 @@
     {
       "source": "Frankfurt",
       "target": "Sydney",
-      "rtt": 265
+      "rtt": 268
     },
     {
       "source": "Frankfurt",
       "target": "Tokyo",
-      "rtt": 222
+      "rtt": 220
     },
     {
       "source": "Frankfurt",
       "target": "Osaka",
-      "rtt": 103
+      "rtt": 99
     },
     {
       "source": "Frankfurt",
       "target": "Montreal",
-      "rtt": 89
+      "rtt": 88
     },
     {
       "source": "Frankfurt",
@@ -333,17 +333,17 @@
     {
       "source": "Madrid",
       "target": "Dallas",
-      "rtt": 98
+      "rtt": 94
     },
     {
       "source": "Madrid",
       "target": "Washington DC",
-      "rtt": 239
+      "rtt": 230
     },
     {
       "source": "Madrid",
       "target": "Toronto",
-      "rtt": 111
+      "rtt": 116
     },
     {
       "source": "Madrid",
@@ -353,7 +353,7 @@
     {
       "source": "Madrid",
       "target": "London",
-      "rtt": 31
+      "rtt": 30
     },
     {
       "source": "Madrid",
@@ -363,92 +363,92 @@
     {
       "source": "Madrid",
       "target": "Sydney",
+      "rtt": 128
+    },
+    {
+      "source": "Madrid",
+      "target": "Tokyo",
       "rtt": 125
     },
     {
       "source": "Madrid",
-      "target": "Tokyo",
-      "rtt": 123
-    },
-    {
-      "source": "Madrid",
       "target": "Osaka",
-      "rtt": 115
+      "rtt": 111
     },
     {
       "source": "Madrid",
       "target": "Montreal",
-      "rtt": 101
+      "rtt": 98
     },
     {
       "source": "Madrid",
       "target": "Chennai",
-      "rtt": 96
+      "rtt": 90
     },
     {
       "source": "Sydney",
       "target": "Dallas",
-      "rtt": 178
+      "rtt": 185
     },
     {
       "source": "Sydney",
       "target": "Washington DC",
-      "rtt": 96
+      "rtt": 97
     },
     {
       "source": "Sydney",
       "target": "Toronto",
-      "rtt": 216
+      "rtt": 225
     },
     {
       "source": "Sydney",
       "target": "Sao Paulo",
-      "rtt": 330
+      "rtt": 307
     },
     {
       "source": "Sydney",
       "target": "London",
-      "rtt": 259
+      "rtt": 248
     },
     {
       "source": "Sydney",
       "target": "Frankfurt",
-      "rtt": 265
+      "rtt": 268
     },
     {
       "source": "Sydney",
       "target": "Madrid",
-      "rtt": 129
+      "rtt": 118
     },
     {
       "source": "Sydney",
       "target": "Tokyo",
-      "rtt": 120
+      "rtt": 119
     },
     {
       "source": "Sydney",
       "target": "Osaka",
-      "rtt": 122
+      "rtt": 118
     },
     {
       "source": "Sydney",
       "target": "Montreal",
-      "rtt": 208
+      "rtt": 220
     },
     {
       "source": "Sydney",
       "target": "Chennai",
-      "rtt": 137
+      "rtt": 140
     },
     {
       "source": "Tokyo",
       "target": "Dallas",
-      "rtt": 152
+      "rtt": 143
     },
     {
       "source": "Tokyo",
       "target": "Washington DC",
-      "rtt": 143
+      "rtt": 141
     },
     {
       "source": "Tokyo",
@@ -458,27 +458,27 @@
     {
       "source": "Tokyo",
       "target": "Sao Paulo",
-      "rtt": 296
+      "rtt": 288
     },
     {
       "source": "Tokyo",
       "target": "London",
-      "rtt": 217
+      "rtt": 220
     },
     {
       "source": "Tokyo",
       "target": "Frankfurt",
-      "rtt": 222
+      "rtt": 220
     },
     {
       "source": "Tokyo",
       "target": "Madrid",
-      "rtt": 127
+      "rtt": 130
     },
     {
       "source": "Tokyo",
       "target": "Sydney",
-      "rtt": 120
+      "rtt": 119
     },
     {
       "source": "Tokyo",
@@ -488,52 +488,52 @@
     {
       "source": "Tokyo",
       "target": "Montreal",
-      "rtt": 209
+      "rtt": 208
     },
     {
       "source": "Tokyo",
       "target": "Chennai",
-      "rtt": 133
+      "rtt": 134
     },
     {
       "source": "Osaka",
       "target": "Dallas",
-      "rtt": 237
+      "rtt": 233
     },
     {
       "source": "Osaka",
       "target": "Washington DC",
-      "rtt": 91
+      "rtt": 89
     },
     {
       "source": "Osaka",
       "target": "Toronto",
-      "rtt": 222
+      "rtt": 215
     },
     {
       "source": "Osaka",
       "target": "Sao Paulo",
-      "rtt": 220
+      "rtt": 226
     },
     {
       "source": "Osaka",
       "target": "London",
-      "rtt": 104
+      "rtt": 98
     },
     {
       "source": "Osaka",
       "target": "Frankfurt",
-      "rtt": 104
+      "rtt": 102
     },
     {
       "source": "Osaka",
       "target": "Madrid",
-      "rtt": 118
+      "rtt": 111
     },
     {
       "source": "Osaka",
       "target": "Sydney",
-      "rtt": 122
+      "rtt": 118
     },
     {
       "source": "Osaka",
@@ -543,22 +543,22 @@
     {
       "source": "Osaka",
       "target": "Montreal",
-      "rtt": 200
+      "rtt": 204
     },
     {
       "source": "Osaka",
       "target": "Chennai",
-      "rtt": 136
+      "rtt": 135
     },
     {
       "source": "Montreal",
       "target": "Dallas",
-      "rtt": 208
+      "rtt": 203
     },
     {
       "source": "Montreal",
       "target": "Washington DC",
-      "rtt": 32
+      "rtt": 30
     },
     {
       "source": "Montreal",
@@ -568,12 +568,12 @@
     {
       "source": "Montreal",
       "target": "Sao Paulo",
-      "rtt": 202
+      "rtt": 210
     },
     {
       "source": "Montreal",
       "target": "London",
-      "rtt": 89
+      "rtt": 84
     },
     {
       "source": "Montreal",
@@ -583,82 +583,82 @@
     {
       "source": "Montreal",
       "target": "Madrid",
-      "rtt": 102
+      "rtt": 101
     },
     {
       "source": "Montreal",
       "target": "Sydney",
-      "rtt": 213
+      "rtt": 208
     },
     {
       "source": "Montreal",
       "target": "Tokyo",
-      "rtt": 214
+      "rtt": 216
     },
     {
       "source": "Montreal",
       "target": "Osaka",
-      "rtt": 217
+      "rtt": 205
     },
     {
       "source": "Montreal",
       "target": "Chennai",
-      "rtt": 187
+      "rtt": 176
     },
     {
       "source": "Chennai",
       "target": "Dallas",
-      "rtt": 206
+      "rtt": 198
     },
     {
       "source": "Chennai",
       "target": "Washington DC",
-      "rtt": 68
+      "rtt": 72
     },
     {
       "source": "Chennai",
       "target": "Toronto",
-      "rtt": 203
+      "rtt": 196
     },
     {
       "source": "Chennai",
       "target": "Sao Paulo",
-      "rtt": 191
+      "rtt": 185
     },
     {
       "source": "Chennai",
       "target": "London",
-      "rtt": 78
+      "rtt": 76
     },
     {
       "source": "Chennai",
       "target": "Frankfurt",
-      "rtt": 80
+      "rtt": 75
     },
     {
       "source": "Chennai",
       "target": "Madrid",
-      "rtt": 93
+      "rtt": 90
     },
     {
       "source": "Chennai",
       "target": "Sydney",
-      "rtt": 137
+      "rtt": 140
     },
     {
       "source": "Chennai",
       "target": "Tokyo",
-      "rtt": 133
+      "rtt": 134
     },
     {
       "source": "Chennai",
       "target": "Osaka",
-      "rtt": 136
+      "rtt": 135
     },
     {
       "source": "Chennai",
       "target": "Montreal",
-      "rtt": 186
+      "rtt": 184
     }
   ]
 }

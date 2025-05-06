@@ -1,7 +1,29 @@
 {
   "connections": [
-    { "source": "Chicago", "target": "Dallas", "latency": 24 },
-    { "source": "New York", "target": "Seattle", "latency": 40 },
-    { "source": "New York", "target": "Washington DC", "latency": 6 }
+    {
+      "source": "Dallas",
+      "target": "Washington DC",
+      "latency": 25
+    },
+    {
+      "source": "Washington DC",
+      "target": "Toronto",
+      "latency": 27
+    },
+    {
+      "source": "Washington DC",
+      "target": "London",
+      "latency": 82
+    },
+    {
+      "source": "London",
+      "target": "Frankfurt",
+      "latency": 14
+    },
+    {
+      "source": "Sao Paulo",
+      "target": "London",
+      "latency": 94
+    }
   ]
 }

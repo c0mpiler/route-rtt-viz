@@ -1,0 +1,117 @@
+{
+  "startTime": "2025-05-05T22:25:25.711Z",
+  "endTime": "2025-05-05T22:25:25.727Z",
+  "success": true,
+  "interRegionStatus": {
+    "updated": true,
+    "backupCreated": "/Users/c0mpiler/sandbox/c0mpiler.dev/novactl-platctl/ic-lat-calc/data-backups/latency-data.json.2025-05-05T22-25-25.714Z.bak",
+    "validationPassed": true,
+    "changes": {
+      "changes": {
+        "addedConnections": [],
+        "removedConnections": [],
+        "changedConnections": [],
+        "addedRegions": [],
+        "removedRegions": []
+      },
+      "stats": {
+        "totalConnectionChanges": 0,
+        "totalRegionChanges": 0,
+        "connectionChangePercent": 0,
+        "regionChangePercent": 0,
+        "avgLatencyChange": 0,
+        "significantChangesCount": 0,
+        "significantChangesPercent": 0
+      }
+    },
+    "anomalies": [
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Jakarta is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Jakarta",
+          "connectionCount": 1,
+          "connectedTo": [
+            "Singapore"
+          ]
+        }
+      },
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Shanghai is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Shanghai",
+          "connectionCount": 1,
+          "connectedTo": [
+            "Hong Kong"
+          ]
+        }
+      },
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Dublin is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Dublin",
+          "connectionCount": 1,
+          "connectedTo": [
+            "London"
+          ]
+        }
+      },
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Oslo is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Oslo",
+          "connectionCount": 1,
+          "connectedTo": [
+            "Stockholm"
+          ]
+        }
+      },
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Riyadh is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Riyadh",
+          "connectionCount": 1,
+          "connectedTo": [
+            "Dubai"
+          ]
+        }
+      },
+      {
+        "type": "isolated_region",
+        "severity": "warning",
+        "message": "Region Perth is isolated with only 1 connection(s)",
+        "details": {
+          "region": "Perth",
+          "connectionCount": 1,
+          "connectedTo": [
+            "Melbourne"
+          ]
+        }
+      }
+    ]
+  },
+  "intraAzStatus": {
+    "updated": true,
+    "backupCreated": "/Users/c0mpiler/sandbox/c0mpiler.dev/novactl-platctl/ic-lat-calc/data-backups/intra-az-latency-data.json.2025-05-05T22-25-25.725Z.bak",
+    "validationPassed": true,
+    "changes": {
+      "regionDiff": 0,
+      "zoneDiff": 0,
+      "latencyDiff": 0,
+      "changedLatencies": 50
+    },
+    "anomalies": null
+  },
+  "errors": [],
+  "timestamp": "2025-05-05T22:25:25.727Z",
+  "lastUpdate": "2025-05-05T22:25:25.727Z"
+}

@@ -99,7 +99,7 @@ export function categorizeRouteBox(index: number, isLongest: boolean): RouteBoxC
  * Formats a path route as a readable string
  * 
  * @param route - Array of region names in the path
- * @returns Formatted string (e.g., "Seattle → Chicago → New York")
+ * @returns Formatted string (e.g., "Dallas → Frankfurt → Tokyo")
  */
 export function formatRoute(route: string[] | undefined): string {
   if (!route || !Array.isArray(route)) {
@@ -114,7 +114,7 @@ export function formatRoute(route: string[] | undefined): string {
  * @param source - Source region
  * @param target - Target region
  * @param latency - RTT between regions
- * @returns Formatted string (e.g., "Seattle → Chicago (41 ms)")
+ * @returns Formatted string (e.g., "Dallas → Frankfurt (90 ms)")
  */
 export function formatRouteStep(source: string, target: string, latency: number): string {
   return `${source} → ${target} (${formatLatency(latency)})`;

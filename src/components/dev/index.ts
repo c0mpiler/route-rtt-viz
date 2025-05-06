@@ -6,3 +6,4 @@
 export * from './DebugTools';
 export * from './EnhancedDebugTools';
 export * from './DebugPanel';
+export { default as LatencyTest } from './LatencyTest';

@@ -85,10 +85,10 @@ export const LatencyChart: React.FC<LatencyChartProps> = ({
       // Add path type to label
       if (longestPath && path.route && longestPath.route && 
           path.route.join() === longestPath.route.join()) {
-        label = '🌐 Overall Longest: ';
+        label = '🌐 Network-Wide Maximum: ';
       } else if (longestPathBetween && path.route && longestPathBetween.route && 
                  path.route.join() === longestPathBetween.route.join()) {
-        label = '🔄 Longest Between: ';
+        label = '🔄 Maximum (Selected): ';
       } else if (index === 0) {
         label = '⚡ Fastest: '; 
       } else {
@@ -187,10 +187,10 @@ export const LatencyChart: React.FC<LatencyChartProps> = ({
             // Add path type information
             if (longestPath && path.route && longestPath.route &&
                 path.route.join() === longestPath.route.join()) {
-              pathTypeName = "Overall Longest Path";
+              pathTypeName = "Network-Wide Maximum Latency";
             } else if (longestPathBetween && path.route && longestPathBetween.route &&
                       path.route.join() === longestPathBetween.route.join()) {
-              pathTypeName = "Longest Path Between Selected Regions";
+              pathTypeName = "Maximum Latency (Selected Regions)";
             } else if (index === 0) {
               pathTypeName = "Fastest Path";
             } else {
@@ -286,11 +286,11 @@ export const LatencyChart: React.FC<LatencyChartProps> = ({
           </div>
           <div className="flex items-center">
             <span className="inline-block w-3 h-3 rounded-full bg-orange-500 mr-2"></span>
-            <span>Longest Path Between Selected</span>
+            <span>Maximum Latency (Selected)</span>
           </div>
           <div className="flex items-center">
             <span className="inline-block w-3 h-3 rounded-full bg-red-600 mr-2"></span>
-            <span>Overall Longest Path</span>
+            <span>Network-Wide Maximum</span>
           </div>
         </div>
       </div>

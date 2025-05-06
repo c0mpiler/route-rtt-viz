@@ -232,7 +232,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             onClick={() => toggleFilter('longestBetween')}
             onDoubleClick={() => isolateFilter('longestBetween')}
             color="bg-amber-600"
-            label="Longest Selected"
+            label="Maximum (Selected)"
             count={longestPathBetweenSelection ? 1 : 0}
           />
           <FilterToggle
@@ -241,7 +241,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
             onClick={() => toggleFilter('longestOverall')}
             onDoubleClick={() => isolateFilter('longestOverall')}
             color="bg-rose-600"
-            label="Overall Longest"
+            label="Network Maximum"
           />
         </div>
       )}

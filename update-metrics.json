@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2025-05-05T22:25:25.727Z",
+    "duration": 0.015,
+    "interRegionMetrics": {
+      "regionCount": 53,
+      "connectionCount": 213,
+      "addedConnections": 0,
+      "updatedConnections": 0,
+      "anomalyCount": 6,
+      "avgLatency": 98.82629107981221,
+      "minLatency": 6,
+      "maxLatency": 336
+    },
+    "intraAzMetrics": {
+      "regionCount": 10,
+      "zoneCount": 30,
+      "zoneConnectionCount": 60,
+      "updatedZoneConnections": 50,
+      "anomalyCount": 0
+    }
+  }
+]

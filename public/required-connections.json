@@ -1,13 +1,114 @@
 {
   "connections": [
-    { "source": "Chicago", "target": "Dallas", "latency": 24 },
-    { "source": "New York", "target": "Seattle", "latency": 40 },
-    { "source": "New York", "target": "Washington DC", "latency": 6 },
-    { "source": "Chicago", "target": "New York", "latency": 16 },
-    { "source": "Dallas", "target": "Seattle", "latency": 35 },
-    { "source": "London", "target": "Frankfurt", "latency": 10 },
-    { "source": "London", "target": "New York", "latency": 70 },
-    { "source": "Singapore", "target": "Tokyo", "latency": 74 },
-    { "source": "Singapore", "target": "Sydney", "latency": 92 }
+    {
+      "source": "Dallas",
+      "target": "Washington DC",
+      "latency": 25
+    },
+    {
+      "source": "Washington DC",
+      "target": "Toronto",
+      "latency": 27
+    },
+    {
+      "source": "Toronto",
+      "target": "Montreal",
+      "latency": 8
+    },
+    {
+      "source": "Washington DC",
+      "target": "Chennai",
+      "latency": 73
+    },
+    {
+      "source": "London",
+      "target": "Chennai",
+      "latency": 77
+    },
+    {
+      "source": "London",
+      "target": "Frankfurt",
+      "latency": 14
+    },
+    {
+      "source": "Frankfurt",
+      "target": "Madrid",
+      "latency": 29
+    },
+    {
+      "source": "Washington DC",
+      "target": "Osaka",
+      "latency": 90
+    },
+    {
+      "source": "Tokyo",
+      "target": "Osaka",
+      "latency": 9
+    },
+    {
+      "source": "Sao Paulo",
+      "target": "London",
+      "latency": 94
+    },
+    {
+      "source": "Washington DC",
+      "target": "Sydney",
+      "latency": 103
+    },
+    {
+      "source": "London",
+      "target": "Madrid",
+      "latency": 31
+    },
+    {
+      "source": "Washington DC",
+      "target": "Montreal",
+      "latency": 32
+    },
+    {
+      "source": "Dallas",
+      "target": "Toronto",
+      "latency": 36
+    },
+    {
+      "source": "Frankfurt",
+      "target": "Chennai",
+      "latency": 81
+    },
+    {
+      "source": "Washington DC",
+      "target": "London",
+      "latency": 82
+    },
+    {
+      "source": "London",
+      "target": "Montreal",
+      "latency": 82
+    },
+    {
+      "source": "Washington DC",
+      "target": "Frankfurt",
+      "latency": 86
+    },
+    {
+      "source": "Frankfurt",
+      "target": "Montreal",
+      "latency": 89
+    },
+    {
+      "source": "Dallas",
+      "target": "London",
+      "latency": 88
+    },
+    {
+      "source": "Dallas",
+      "target": "Frankfurt",
+      "latency": 89
+    },
+    {
+      "source": "Toronto",
+      "target": "London",
+      "latency": 89
+    }
   ]
 }

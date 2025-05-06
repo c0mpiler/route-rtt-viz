@@ -1,6 +1,6 @@
-# IBM Cloud Latency Pathfinder - Technical Architecture
+# Route Radar - Technical Architecture
 
-This document provides a comprehensive overview of the IBM Cloud Latency Pathfinder application's technical architecture, data flow, algorithms, implementation details, and maintenance procedures.
+This document provides a comprehensive overview of the Route Radar application's technical architecture, data flow, algorithms, implementation details, and maintenance procedures.
 
 ## Table of Contents
 
@@ -449,7 +449,7 @@ The application uses modern front-end tooling:
 ### Project Structure
 
 ```
-/ic-lat-calc/
+/route-rtt-viz/
 ├── public/                     # Static files and data
 │   ├── latency-data.json       # Primary network latency data
 │   └── ...                     # Other data files
@@ -473,7 +473,6 @@ The application uses modern front-end tooling:
 │   ├── update-rtt.js           # RTT update utility
 │   └── package.json            # Tool dependencies
 ├── docs/                       # Documentation
-├── TECHNICAL-ARCHITECTURE.md   # This file
 ├── README.md                   # Project overview
 └── ...                         # Configuration files
 ```

@@ -101,7 +101,9 @@ export const RouteCard: React.FC<RouteCardProps> = ({
     >
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
         <h3 className="text-lg font-bold flex items-center">
-          {isLongest ? 'Longest Path' : index === 0 ? 'Fastest Path' : `Path ${index + 1}`}
+          {isLongest ? 
+            (index === 1 ? 'Network-Wide Maximum Latency' : 'Maximum Latency (Selected Regions)') : 
+            (index === 0 ? 'Fastest Path' : `Path ${index + 1}`)}
           {expanded ? 
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />

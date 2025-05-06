@@ -1,6 +1,6 @@
-# IBM Cloud Latency Pathfinder - RTT Update Guide
+# Route Radar - RTT Update Guide
 
-This document explains how to update Round-Trip Time (RTT) values in the IBM Cloud Latency Pathfinder application. All the data used by the application is now stored in JSON files without any hard-coded values in the source code.
+This document explains how to update Round-Trip Time (RTT) values in the Route Radar application. All the data used by the application is stored in JSON files without any hard-coded values in the source code.
 
 ## Data Files Structure
 

@@ -1,0 +1,1210 @@
+{
+  "timestamp": "2025-05-06T00:46:29.892Z",
+  "rawData": {
+    "timestamp": "2025-05-06T00:46:29.892Z",
+    "regions": [
+      {
+        "regionName": "us-south",
+        "displayName": "Dallas",
+        "zones": [
+          "us-south-1",
+          "us-south-2",
+          "us-south-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "us-south-1",
+            "targetZone": "us-south-2",
+            "latency": 0.58
+          },
+          {
+            "sourceZone": "us-south-2",
+            "targetZone": "us-south-1",
+            "latency": 0.58
+          },
+          {
+            "sourceZone": "us-south-1",
+            "targetZone": "us-south-3",
+            "latency": 0.59
+          },
+          {
+            "sourceZone": "us-south-3",
+            "targetZone": "us-south-1",
+            "latency": 0.59
+          },
+          {
+            "sourceZone": "us-south-2",
+            "targetZone": "us-south-3",
+            "latency": 0.58
+          },
+          {
+            "sourceZone": "us-south-3",
+            "targetZone": "us-south-2",
+            "latency": 0.58
+          }
+        ]
+      },
+      {
+        "regionName": "us-east",
+        "displayName": "Washington DC",
+        "zones": [
+          "us-east-1",
+          "us-east-2",
+          "us-east-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "us-east-1",
+            "targetZone": "us-east-2",
+            "latency": 0.46
+          },
+          {
+            "sourceZone": "us-east-2",
+            "targetZone": "us-east-1",
+            "latency": 0.46
+          },
+          {
+            "sourceZone": "us-east-1",
+            "targetZone": "us-east-3",
+            "latency": 0.47
+          },
+          {
+            "sourceZone": "us-east-3",
+            "targetZone": "us-east-1",
+            "latency": 0.47
+          },
+          {
+            "sourceZone": "us-east-2",
+            "targetZone": "us-east-3",
+            "latency": 0.47
+          },
+          {
+            "sourceZone": "us-east-3",
+            "targetZone": "us-east-2",
+            "latency": 0.47
+          }
+        ]
+      },
+      {
+        "regionName": "ca-tor",
+        "displayName": "Toronto",
+        "zones": [
+          "ca-tor-1",
+          "ca-tor-2",
+          "ca-tor-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "ca-tor-1",
+            "targetZone": "ca-tor-2",
+            "latency": 0.97
+          },
+          {
+            "sourceZone": "ca-tor-2",
+            "targetZone": "ca-tor-1",
+            "latency": 0.97
+          },
+          {
+            "sourceZone": "ca-tor-1",
+            "targetZone": "ca-tor-3",
+            "latency": 1.02
+          },
+          {
+            "sourceZone": "ca-tor-3",
+            "targetZone": "ca-tor-1",
+            "latency": 1.02
+          },
+          {
+            "sourceZone": "ca-tor-2",
+            "targetZone": "ca-tor-3",
+            "latency": 1.02
+          },
+          {
+            "sourceZone": "ca-tor-3",
+            "targetZone": "ca-tor-2",
+            "latency": 1.02
+          }
+        ]
+      },
+      {
+        "regionName": "br-sao",
+        "displayName": "Sao Paulo",
+        "zones": [
+          "br-sao-1",
+          "br-sao-2",
+          "br-sao-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "br-sao-1",
+            "targetZone": "br-sao-2",
+            "latency": 1.28
+          },
+          {
+            "sourceZone": "br-sao-2",
+            "targetZone": "br-sao-1",
+            "latency": 1.28
+          },
+          {
+            "sourceZone": "br-sao-1",
+            "targetZone": "br-sao-3",
+            "latency": 1.25
+          },
+          {
+            "sourceZone": "br-sao-3",
+            "targetZone": "br-sao-1",
+            "latency": 1.25
+          },
+          {
+            "sourceZone": "br-sao-2",
+            "targetZone": "br-sao-3",
+            "latency": 1.23
+          },
+          {
+            "sourceZone": "br-sao-3",
+            "targetZone": "br-sao-2",
+            "latency": 1.23
+          }
+        ]
+      },
+      {
+        "regionName": "eu-gb",
+        "displayName": "London",
+        "zones": [
+          "eu-gb-1",
+          "eu-gb-2",
+          "eu-gb-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "eu-gb-1",
+            "targetZone": "eu-gb-2",
+            "latency": 0.74
+          },
+          {
+            "sourceZone": "eu-gb-2",
+            "targetZone": "eu-gb-1",
+            "latency": 0.74
+          },
+          {
+            "sourceZone": "eu-gb-1",
+            "targetZone": "eu-gb-3",
+            "latency": 0.73
+          },
+          {
+            "sourceZone": "eu-gb-3",
+            "targetZone": "eu-gb-1",
+            "latency": 0.73
+          },
+          {
+            "sourceZone": "eu-gb-2",
+            "targetZone": "eu-gb-3",
+            "latency": 0.74
+          },
+          {
+            "sourceZone": "eu-gb-3",
+            "targetZone": "eu-gb-2",
+            "latency": 0.74
+          }
+        ]
+      },
+      {
+        "regionName": "eu-de",
+        "displayName": "Frankfurt",
+        "zones": [
+          "eu-de-1",
+          "eu-de-2",
+          "eu-de-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "eu-de-1",
+            "targetZone": "eu-de-2",
+            "latency": 0.66
+          },
+          {
+            "sourceZone": "eu-de-2",
+            "targetZone": "eu-de-1",
+            "latency": 0.66
+          },
+          {
+            "sourceZone": "eu-de-1",
+            "targetZone": "eu-de-3",
+            "latency": 0.64
+          },
+          {
+            "sourceZone": "eu-de-3",
+            "targetZone": "eu-de-1",
+            "latency": 0.64
+          },
+          {
+            "sourceZone": "eu-de-2",
+            "targetZone": "eu-de-3",
+            "latency": 0.64
+          },
+          {
+            "sourceZone": "eu-de-3",
+            "targetZone": "eu-de-2",
+            "latency": 0.64
+          }
+        ]
+      },
+      {
+        "regionName": "eu-es",
+        "displayName": "Madrid",
+        "zones": [
+          "eu-es-1",
+          "eu-es-2",
+          "eu-es-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "eu-es-1",
+            "targetZone": "eu-es-2",
+            "latency": 1.06
+          },
+          {
+            "sourceZone": "eu-es-2",
+            "targetZone": "eu-es-1",
+            "latency": 1.06
+          },
+          {
+            "sourceZone": "eu-es-1",
+            "targetZone": "eu-es-3",
+            "latency": 1.08
+          },
+          {
+            "sourceZone": "eu-es-3",
+            "targetZone": "eu-es-1",
+            "latency": 1.08
+          },
+          {
+            "sourceZone": "eu-es-2",
+            "targetZone": "eu-es-3",
+            "latency": 1.09
+          },
+          {
+            "sourceZone": "eu-es-3",
+            "targetZone": "eu-es-2",
+            "latency": 1.09
+          }
+        ]
+      },
+      {
+        "regionName": "jp-tok",
+        "displayName": "Tokyo",
+        "zones": [
+          "jp-tok-1",
+          "jp-tok-2",
+          "jp-tok-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "jp-tok-1",
+            "targetZone": "jp-tok-2",
+            "latency": 0.82
+          },
+          {
+            "sourceZone": "jp-tok-2",
+            "targetZone": "jp-tok-1",
+            "latency": 0.82
+          },
+          {
+            "sourceZone": "jp-tok-1",
+            "targetZone": "jp-tok-3",
+            "latency": 0.87
+          },
+          {
+            "sourceZone": "jp-tok-3",
+            "targetZone": "jp-tok-1",
+            "latency": 0.87
+          },
+          {
+            "sourceZone": "jp-tok-2",
+            "targetZone": "jp-tok-3",
+            "latency": 0.84
+          },
+          {
+            "sourceZone": "jp-tok-3",
+            "targetZone": "jp-tok-2",
+            "latency": 0.84
+          }
+        ]
+      },
+      {
+        "regionName": "jp-osa",
+        "displayName": "Osaka",
+        "zones": [
+          "jp-osa-1",
+          "jp-osa-2",
+          "jp-osa-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "jp-osa-1",
+            "targetZone": "jp-osa-2",
+            "latency": 1.04
+          },
+          {
+            "sourceZone": "jp-osa-2",
+            "targetZone": "jp-osa-1",
+            "latency": 1.04
+          },
+          {
+            "sourceZone": "jp-osa-1",
+            "targetZone": "jp-osa-3",
+            "latency": 1.03
+          },
+          {
+            "sourceZone": "jp-osa-3",
+            "targetZone": "jp-osa-1",
+            "latency": 1.03
+          },
+          {
+            "sourceZone": "jp-osa-2",
+            "targetZone": "jp-osa-3",
+            "latency": 1.05
+          },
+          {
+            "sourceZone": "jp-osa-3",
+            "targetZone": "jp-osa-2",
+            "latency": 1.05
+          }
+        ]
+      },
+      {
+        "regionName": "au-syd",
+        "displayName": "Sydney",
+        "zones": [
+          "au-syd-1",
+          "au-syd-2",
+          "au-syd-3"
+        ],
+        "zoneLatencies": [
+          {
+            "sourceZone": "au-syd-1",
+            "targetZone": "au-syd-2",
+            "latency": 1.22
+          },
+          {
+            "sourceZone": "au-syd-2",
+            "targetZone": "au-syd-1",
+            "latency": 1.22
+          },
+          {
+            "sourceZone": "au-syd-1",
+            "targetZone": "au-syd-3",
+            "latency": 1.21
+          },
+          {
+            "sourceZone": "au-syd-3",
+            "targetZone": "au-syd-1",
+            "latency": 1.21
+          },
+          {
+            "sourceZone": "au-syd-2",
+            "targetZone": "au-syd-3",
+            "latency": 1.2
+          },
+          {
+            "sourceZone": "au-syd-3",
+            "targetZone": "au-syd-2",
+            "latency": 1.2
+          }
+        ]
+      }
+    ],
+    "hpcRecommendations": [
+      {
+        "workloadType": "Tightly Coupled HPC",
+        "recommendedRegion": "us-east",
+        "recommendedZones": [
+          "us-east-1",
+          "us-east-2"
+        ],
+        "reason": "Lowest inter-zone latency (avg 0.47ms)"
+      },
+      {
+        "workloadType": "ML Training",
+        "recommendedRegion": "us-east",
+        "recommendedZones": [
+          "us-east-1",
+          "us-east-2"
+        ],
+        "reason": "Consistent performance (stdDev 0.00ms)"
+      },
+      {
+        "workloadType": "Data Analytics",
+        "recommendedRegion": "us-south",
+        "recommendedZones": [
+          "us-south-1",
+          "us-south-2",
+          "us-south-3"
+        ],
+        "reason": "Balanced latency and consistency (avg 0.58ms)"
+      }
+    ]
+  },
+  "vizData": {
+    "timestamp": "2025-05-06T00:46:29.892Z",
+    "regions": [
+      {
+        "displayName": "Dallas",
+        "stats": {
+          "min": 0.58,
+          "max": 0.59,
+          "avg": 0.5833333333333334
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "us-south-1",
+              "label": "1"
+            },
+            {
+              "id": "us-south-2",
+              "label": "2"
+            },
+            {
+              "id": "us-south-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "us-south-1",
+              "target": "us-south-2",
+              "value": 0.58,
+              "label": "0.58ms"
+            },
+            {
+              "source": "us-south-2",
+              "target": "us-south-1",
+              "value": 0.58,
+              "label": "0.58ms"
+            },
+            {
+              "source": "us-south-1",
+              "target": "us-south-3",
+              "value": 0.59,
+              "label": "0.59ms"
+            },
+            {
+              "source": "us-south-3",
+              "target": "us-south-1",
+              "value": 0.59,
+              "label": "0.59ms"
+            },
+            {
+              "source": "us-south-2",
+              "target": "us-south-3",
+              "value": 0.58,
+              "label": "0.58ms"
+            },
+            {
+              "source": "us-south-3",
+              "target": "us-south-2",
+              "value": 0.58,
+              "label": "0.58ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Washington DC",
+        "stats": {
+          "min": 0.46,
+          "max": 0.47,
+          "avg": 0.4666666666666666
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "us-east-1",
+              "label": "1"
+            },
+            {
+              "id": "us-east-2",
+              "label": "2"
+            },
+            {
+              "id": "us-east-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "us-east-1",
+              "target": "us-east-2",
+              "value": 0.46,
+              "label": "0.46ms"
+            },
+            {
+              "source": "us-east-2",
+              "target": "us-east-1",
+              "value": 0.46,
+              "label": "0.46ms"
+            },
+            {
+              "source": "us-east-1",
+              "target": "us-east-3",
+              "value": 0.47,
+              "label": "0.47ms"
+            },
+            {
+              "source": "us-east-3",
+              "target": "us-east-1",
+              "value": 0.47,
+              "label": "0.47ms"
+            },
+            {
+              "source": "us-east-2",
+              "target": "us-east-3",
+              "value": 0.47,
+              "label": "0.47ms"
+            },
+            {
+              "source": "us-east-3",
+              "target": "us-east-2",
+              "value": 0.47,
+              "label": "0.47ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Toronto",
+        "stats": {
+          "min": 0.97,
+          "max": 1.02,
+          "avg": 1.0033333333333332
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "ca-tor-1",
+              "label": "1"
+            },
+            {
+              "id": "ca-tor-2",
+              "label": "2"
+            },
+            {
+              "id": "ca-tor-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "ca-tor-1",
+              "target": "ca-tor-2",
+              "value": 0.97,
+              "label": "0.97ms"
+            },
+            {
+              "source": "ca-tor-2",
+              "target": "ca-tor-1",
+              "value": 0.97,
+              "label": "0.97ms"
+            },
+            {
+              "source": "ca-tor-1",
+              "target": "ca-tor-3",
+              "value": 1.02,
+              "label": "1.02ms"
+            },
+            {
+              "source": "ca-tor-3",
+              "target": "ca-tor-1",
+              "value": 1.02,
+              "label": "1.02ms"
+            },
+            {
+              "source": "ca-tor-2",
+              "target": "ca-tor-3",
+              "value": 1.02,
+              "label": "1.02ms"
+            },
+            {
+              "source": "ca-tor-3",
+              "target": "ca-tor-2",
+              "value": 1.02,
+              "label": "1.02ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Sao Paulo",
+        "stats": {
+          "min": 1.23,
+          "max": 1.28,
+          "avg": 1.2533333333333336
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "br-sao-1",
+              "label": "1"
+            },
+            {
+              "id": "br-sao-2",
+              "label": "2"
+            },
+            {
+              "id": "br-sao-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "br-sao-1",
+              "target": "br-sao-2",
+              "value": 1.28,
+              "label": "1.28ms"
+            },
+            {
+              "source": "br-sao-2",
+              "target": "br-sao-1",
+              "value": 1.28,
+              "label": "1.28ms"
+            },
+            {
+              "source": "br-sao-1",
+              "target": "br-sao-3",
+              "value": 1.25,
+              "label": "1.25ms"
+            },
+            {
+              "source": "br-sao-3",
+              "target": "br-sao-1",
+              "value": 1.25,
+              "label": "1.25ms"
+            },
+            {
+              "source": "br-sao-2",
+              "target": "br-sao-3",
+              "value": 1.23,
+              "label": "1.23ms"
+            },
+            {
+              "source": "br-sao-3",
+              "target": "br-sao-2",
+              "value": 1.23,
+              "label": "1.23ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "London",
+        "stats": {
+          "min": 0.73,
+          "max": 0.74,
+          "avg": 0.7366666666666667
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "eu-gb-1",
+              "label": "1"
+            },
+            {
+              "id": "eu-gb-2",
+              "label": "2"
+            },
+            {
+              "id": "eu-gb-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "eu-gb-1",
+              "target": "eu-gb-2",
+              "value": 0.74,
+              "label": "0.74ms"
+            },
+            {
+              "source": "eu-gb-2",
+              "target": "eu-gb-1",
+              "value": 0.74,
+              "label": "0.74ms"
+            },
+            {
+              "source": "eu-gb-1",
+              "target": "eu-gb-3",
+              "value": 0.73,
+              "label": "0.73ms"
+            },
+            {
+              "source": "eu-gb-3",
+              "target": "eu-gb-1",
+              "value": 0.73,
+              "label": "0.73ms"
+            },
+            {
+              "source": "eu-gb-2",
+              "target": "eu-gb-3",
+              "value": 0.74,
+              "label": "0.74ms"
+            },
+            {
+              "source": "eu-gb-3",
+              "target": "eu-gb-2",
+              "value": 0.74,
+              "label": "0.74ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Frankfurt",
+        "stats": {
+          "min": 0.64,
+          "max": 0.66,
+          "avg": 0.6466666666666667
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "eu-de-1",
+              "label": "1"
+            },
+            {
+              "id": "eu-de-2",
+              "label": "2"
+            },
+            {
+              "id": "eu-de-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "eu-de-1",
+              "target": "eu-de-2",
+              "value": 0.66,
+              "label": "0.66ms"
+            },
+            {
+              "source": "eu-de-2",
+              "target": "eu-de-1",
+              "value": 0.66,
+              "label": "0.66ms"
+            },
+            {
+              "source": "eu-de-1",
+              "target": "eu-de-3",
+              "value": 0.64,
+              "label": "0.64ms"
+            },
+            {
+              "source": "eu-de-3",
+              "target": "eu-de-1",
+              "value": 0.64,
+              "label": "0.64ms"
+            },
+            {
+              "source": "eu-de-2",
+              "target": "eu-de-3",
+              "value": 0.64,
+              "label": "0.64ms"
+            },
+            {
+              "source": "eu-de-3",
+              "target": "eu-de-2",
+              "value": 0.64,
+              "label": "0.64ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Madrid",
+        "stats": {
+          "min": 1.06,
+          "max": 1.09,
+          "avg": 1.0766666666666667
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "eu-es-1",
+              "label": "1"
+            },
+            {
+              "id": "eu-es-2",
+              "label": "2"
+            },
+            {
+              "id": "eu-es-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "eu-es-1",
+              "target": "eu-es-2",
+              "value": 1.06,
+              "label": "1.06ms"
+            },
+            {
+              "source": "eu-es-2",
+              "target": "eu-es-1",
+              "value": 1.06,
+              "label": "1.06ms"
+            },
+            {
+              "source": "eu-es-1",
+              "target": "eu-es-3",
+              "value": 1.08,
+              "label": "1.08ms"
+            },
+            {
+              "source": "eu-es-3",
+              "target": "eu-es-1",
+              "value": 1.08,
+              "label": "1.08ms"
+            },
+            {
+              "source": "eu-es-2",
+              "target": "eu-es-3",
+              "value": 1.09,
+              "label": "1.09ms"
+            },
+            {
+              "source": "eu-es-3",
+              "target": "eu-es-2",
+              "value": 1.09,
+              "label": "1.09ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Tokyo",
+        "stats": {
+          "min": 0.82,
+          "max": 0.87,
+          "avg": 0.8433333333333333
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "jp-tok-1",
+              "label": "1"
+            },
+            {
+              "id": "jp-tok-2",
+              "label": "2"
+            },
+            {
+              "id": "jp-tok-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "jp-tok-1",
+              "target": "jp-tok-2",
+              "value": 0.82,
+              "label": "0.82ms"
+            },
+            {
+              "source": "jp-tok-2",
+              "target": "jp-tok-1",
+              "value": 0.82,
+              "label": "0.82ms"
+            },
+            {
+              "source": "jp-tok-1",
+              "target": "jp-tok-3",
+              "value": 0.87,
+              "label": "0.87ms"
+            },
+            {
+              "source": "jp-tok-3",
+              "target": "jp-tok-1",
+              "value": 0.87,
+              "label": "0.87ms"
+            },
+            {
+              "source": "jp-tok-2",
+              "target": "jp-tok-3",
+              "value": 0.84,
+              "label": "0.84ms"
+            },
+            {
+              "source": "jp-tok-3",
+              "target": "jp-tok-2",
+              "value": 0.84,
+              "label": "0.84ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Osaka",
+        "stats": {
+          "min": 1.03,
+          "max": 1.05,
+          "avg": 1.04
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "jp-osa-1",
+              "label": "1"
+            },
+            {
+              "id": "jp-osa-2",
+              "label": "2"
+            },
+            {
+              "id": "jp-osa-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "jp-osa-1",
+              "target": "jp-osa-2",
+              "value": 1.04,
+              "label": "1.04ms"
+            },
+            {
+              "source": "jp-osa-2",
+              "target": "jp-osa-1",
+              "value": 1.04,
+              "label": "1.04ms"
+            },
+            {
+              "source": "jp-osa-1",
+              "target": "jp-osa-3",
+              "value": 1.03,
+              "label": "1.03ms"
+            },
+            {
+              "source": "jp-osa-3",
+              "target": "jp-osa-1",
+              "value": 1.03,
+              "label": "1.03ms"
+            },
+            {
+              "source": "jp-osa-2",
+              "target": "jp-osa-3",
+              "value": 1.05,
+              "label": "1.05ms"
+            },
+            {
+              "source": "jp-osa-3",
+              "target": "jp-osa-2",
+              "value": 1.05,
+              "label": "1.05ms"
+            }
+          ]
+        }
+      },
+      {
+        "displayName": "Sydney",
+        "stats": {
+          "min": 1.2,
+          "max": 1.22,
+          "avg": 1.21
+        },
+        "networkData": {
+          "nodes": [
+            {
+              "id": "au-syd-1",
+              "label": "1"
+            },
+            {
+              "id": "au-syd-2",
+              "label": "2"
+            },
+            {
+              "id": "au-syd-3",
+              "label": "3"
+            }
+          ],
+          "links": [
+            {
+              "source": "au-syd-1",
+              "target": "au-syd-2",
+              "value": 1.22,
+              "label": "1.22ms"
+            },
+            {
+              "source": "au-syd-2",
+              "target": "au-syd-1",
+              "value": 1.22,
+              "label": "1.22ms"
+            },
+            {
+              "source": "au-syd-1",
+              "target": "au-syd-3",
+              "value": 1.21,
+              "label": "1.21ms"
+            },
+            {
+              "source": "au-syd-3",
+              "target": "au-syd-1",
+              "value": 1.21,
+              "label": "1.21ms"
+            },
+            {
+              "source": "au-syd-2",
+              "target": "au-syd-3",
+              "value": 1.2,
+              "label": "1.2ms"
+            },
+            {
+              "source": "au-syd-3",
+              "target": "au-syd-2",
+              "value": 1.2,
+              "label": "1.2ms"
+            }
+          ]
+        }
+      }
+    ],
+    "hpcRecommendations": [
+      {
+        "workloadType": "Tightly Coupled HPC",
+        "recommendedRegion": "us-east",
+        "recommendedZones": [
+          "us-east-1",
+          "us-east-2"
+        ],
+        "reason": "Lowest inter-zone latency (avg 0.47ms)"
+      },
+      {
+        "workloadType": "ML Training",
+        "recommendedRegion": "us-east",
+        "recommendedZones": [
+          "us-east-1",
+          "us-east-2"
+        ],
+        "reason": "Consistent performance (stdDev 0.00ms)"
+      },
+      {
+        "workloadType": "Data Analytics",
+        "recommendedRegion": "us-south",
+        "recommendedZones": [
+          "us-south-1",
+          "us-south-2",
+          "us-south-3"
+        ],
+        "reason": "Balanced latency and consistency (avg 0.58ms)"
+      }
+    ]
+  },
+  "hpcAnalysis": [
+    {
+      "workloadType": "Tightly Coupled HPC",
+      "recommendations": [
+        {
+          "displayName": "Washington DC",
+          "reason": "Low inter-zone latency (avg 0.47ms)",
+          "latencyStats": {
+            "avg": 0.4666666666666666,
+            "min": 0.46,
+            "max": 0.47,
+            "stdDev": 0.004714045207910296
+          }
+        },
+        {
+          "displayName": "Dallas",
+          "reason": "Low inter-zone latency (avg 0.58ms)",
+          "latencyStats": {
+            "avg": 0.5833333333333334,
+            "min": 0.58,
+            "max": 0.59,
+            "stdDev": 0.004714045207910321
+          }
+        },
+        {
+          "displayName": "Frankfurt",
+          "reason": "Low inter-zone latency (avg 0.65ms)",
+          "latencyStats": {
+            "avg": 0.6466666666666667,
+            "min": 0.64,
+            "max": 0.66,
+            "stdDev": 0.009428090415820642
+          }
+        }
+      ]
+    },
+    {
+      "workloadType": "Data Analytics",
+      "recommendations": [
+        {
+          "displayName": "Washington DC",
+          "reason": "Predictable latency (stdDev 0.00ms)",
+          "latencyStats": {
+            "avg": 0.4666666666666666,
+            "min": 0.46,
+            "max": 0.47,
+            "stdDev": 0.004714045207910296
+          }
+        },
+        {
+          "displayName": "Dallas",
+          "reason": "Predictable latency (stdDev 0.00ms)",
+          "latencyStats": {
+            "avg": 0.5833333333333334,
+            "min": 0.58,
+            "max": 0.59,
+            "stdDev": 0.004714045207910321
+          }
+        },
+        {
+          "displayName": "London",
+          "reason": "Predictable latency (stdDev 0.00ms)",
+          "latencyStats": {
+            "avg": 0.7366666666666667,
+            "min": 0.73,
+            "max": 0.74,
+            "stdDev": 0.004714045207910321
+          }
+        }
+      ]
+    },
+    {
+      "workloadType": "Distributed Computing",
+      "recommendations": [
+        {
+          "displayName": "Washington DC",
+          "reason": "Consistent performance (max latency 0.47ms)",
+          "latencyStats": {
+            "avg": 0.4666666666666666,
+            "min": 0.46,
+            "max": 0.47,
+            "stdDev": 0.004714045207910296
+          }
+        },
+        {
+          "displayName": "Dallas",
+          "reason": "Consistent performance (max latency 0.59ms)",
+          "latencyStats": {
+            "avg": 0.5833333333333334,
+            "min": 0.58,
+            "max": 0.59,
+            "stdDev": 0.004714045207910321
+          }
+        },
+        {
+          "displayName": "Frankfurt",
+          "reason": "Consistent performance (max latency 0.66ms)",
+          "latencyStats": {
+            "avg": 0.6466666666666667,
+            "min": 0.64,
+            "max": 0.66,
+            "stdDev": 0.009428090415820642
+          }
+        }
+      ]
+    }
+  ]
+}
