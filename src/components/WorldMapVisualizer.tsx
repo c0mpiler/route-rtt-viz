@@ -534,10 +534,11 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
           paths[0] &&
           paths[0].route
         ) {
+          // Only include regions in the first path for Fastest filter
           return paths[0].route.includes(region);
         }
-
-        if (highlightedFilter === "alternative" && paths && paths.length > 1) {
+        else if (highlightedFilter === "alternative" && paths && paths.length > 1) {
+          // Only include regions in paths after the first one for Alternative filter
           for (let i = 1; i < paths.length; i++) {
             if (paths[i] && paths[i].route && paths[i].route.includes(region)) {
               return true;
@@ -590,10 +591,11 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
         paths[0].route &&
         paths[0].route.includes(region)
       ) {
-        return true; // Fastest path
+        return true; // Fastest path (only the first path)
       }
 
       if (showAlternative && paths && paths.length > 1) {
+        // Alternative paths (all paths after the first)
         for (let i = 1; i < paths.length; i++) {
           if (paths[i] && paths[i].route && paths[i].route.includes(region)) {
             return true; // Alternative paths
@@ -638,10 +640,11 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
           paths[0].route &&
           paths[0].route.includes(region)
         ) {
-          return 4; // Fastest path
+          return 4; // Fastest path (only the first path)
         }
 
         if (highlightedFilter === "alternative" && paths && paths.length > 1) {
+          // Check only paths after the first one (indices 1+)
           for (let i = 1; i < paths.length; i++) {
             if (paths[i] && paths[i].route && paths[i].route.includes(region)) {
               return 5; // Alternative path
@@ -1005,19 +1008,23 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
       // Determine which paths to include based on filters/highlighting
       const allPaths: Path[] = [];
 
-      // If we have an active highlight, only show paths for that filter
+      // Handle each highlight filter type
       if (highlightedFilter) {
         // Handle each highlight filter type
         if (
           highlightedFilter === "fastest" &&
           paths &&
-          paths.length > 0 &&
-          paths[0]
+          paths.length > 0
         ) {
-          allPaths.push(paths[0]);
+          // Only add the first path for Fastest filter
+          if (paths[0]) allPaths.push(paths[0]);
         }
-
-        if (highlightedFilter === "alternative" && paths && paths.length > 1) {
+        else if (
+          highlightedFilter === "alternative" &&
+          paths &&
+          paths.length > 1
+        ) {
+          // Only add paths after the first one for Alternative filter
           for (let i = 1; i < paths.length; i++) {
             if (paths[i]) allPaths.push(paths[i]);
           }
@@ -1049,7 +1056,7 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
 
         // Add fastest path if filter is enabled (only the first path)
         if (showFastest && paths && paths.length > 0) {
-          allPaths.push(paths[0]);
+          if (paths[0]) allPaths.push(paths[0]);
         }
 
         // Add alternative paths if filter is enabled (all paths except the first)
@@ -1087,11 +1094,11 @@ export const WorldMapVisualizer: React.FC<WorldMapVisualizerProps> = ({
         } else if (path === longestPathBetween) {
           pathColor = colors.longestBetween; // Orange for longest between
           highlighted = true;
-        } else if (path === paths[0]) {
-          pathColor = colors.fastest; // Green for fastest
+        } else if (paths.length > 0 && path === paths[0]) {
+          pathColor = colors.fastest; // Cyan for fastest (first path only)
           highlighted = true;
-        } else {
-          pathColor = colors.alternative; // Blue for alternatives
+        } else if (paths.length > 1 && paths.indexOf(path) > 0) {
+          pathColor = colors.alternative; // Indigo for alternatives (all paths after first)
           highlighted = true;
         }
 

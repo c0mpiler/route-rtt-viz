@@ -403,13 +403,13 @@ export const NetworkVisualizer: React.FC<NetworkVisualizerProps> = ({
     if (filters.longestBetween && longestPathBetween && longestPathBetween.route && isLinkInPath(link, longestPathBetween)) 
       return colors.longestBetween; // Amber for longest between selected
       
-    if (filters.fastest && paths && paths.length > 0 && paths[0] && paths[0].route && isLinkInPath(link, paths[0])) 
-      return colors.fastest; // Cyan for fastest
+    if (filters.fastest && paths && paths.length > 0 && paths[0] && isLinkInPath(link, paths[0])) 
+      return colors.fastest; // Cyan for fastest path only
       
     if (filters.alternative && paths && paths.length > 1) {
-      // Check all alternative paths
+      // Check all alternative paths (paths after first one)
       for (let i = 1; i < paths.length; i++) {
-        if (paths[i] && paths[i].route && isLinkInPath(link, paths[i])) {
+        if (paths[i] && isLinkInPath(link, paths[i])) {
           return colors.alternative; // Indigo for alternatives
         }
       }

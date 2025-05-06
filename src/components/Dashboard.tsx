@@ -274,7 +274,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
           component={
           <WorldMapVisualizer
           graph={graph}
-          paths={filters.fastest ? shortestPaths : []}
+          paths={shortestPaths} // Always pass all paths to visualizer
           longestPath={filters.longestOverall ? longestPath : null}
           longestPathBetween={filters.longestBetween ? longestPathBetweenSelection : null}
           sourceRegion={sourceRegion}
@@ -330,7 +330,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
           component={
           <NetworkVisualizer
           graph={graph}
-          paths={filters.fastest ? shortestPaths : []}
+          paths={shortestPaths} // Always pass all paths to visualizer
           longestPath={filters.longestOverall ? longestPath : null}
           longestPathBetween={filters.longestBetween ? longestPathBetweenSelection : null}
           sourceRegion={sourceRegion}
